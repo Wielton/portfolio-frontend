@@ -1,16 +1,12 @@
 <template>
 
   <v-app id="app" style="background-color:#383838">
-    <v-container fill-height fluid>
-      <v-row>
-        <v-col>
-          <v-app-bar
+    <v-app-bar
             app
             fixed
             color="#383838"
             elevate-on-scroll
             dense
-            height="75"
             >
             <v-btn
               class="mx-2"
@@ -41,7 +37,7 @@
               <v-tab @click="scrollsTo('contact')">CONTACT
               </v-tab>
             </v-tabs>
-            <v-btn
+            <!-- <v-btn
               @click="drawer = !drawer"
               style="background-color:#383838"
               max-width="50"
@@ -49,242 +45,240 @@
               class="hidden-md-and-up"
               >
               <v-icon  style="color:#e1bf74">mdi-menu</v-icon>
-            </v-btn>
+            </v-btn> -->
           </v-app-bar>
-        </v-col>
-      </v-row>
-    </v-container>
-  <v-main 
-    app
-    align="center">
-      <v-container id="top-section">
-        <v-row
-          style="height: 500px"
-          align="center"
-          justify="center">
-            <v-col 
-              cols="12" 
-              sm="4" 
-              class="text-center">
-                <h1 style="color:#e1bf74">Welcome!</h1>
-                  <p style="color:#e1bf74"> 
-                    I'm Grant Wielgosz a Full Stack Developer ready to make your idea become a reality!
-                  </p>
-            </v-col>
-            <v-col
-              cols="12"
-              sm="8"
-              align="center">
-                <v-avatar
-                  id="hero-img"
-                  size="250"
-                  >
-                    <v-img
-                      :src="require('../src/assets/profile-pic.jpg')"/>
-                </v-avatar>
-            </v-col>
-        </v-row>
-      </v-container>
-      <v-divider color="#e1bf74"></v-divider>
-      <v-container ref="about">
-        <h1 style="color:#e1bf74">ABOUT</h1>
-        <v-row
-          style="height:300px"
-          align="center">
-          <v-col>
-            <div>
-              <p style="color:#e1bf74">A recent graduate of Innotech College with a Full Stack Web Developer diploma!
-                    <br>
-                      Over the last few years I've grown a passion for coding and made the commitment to switch up careers.
-                    <br>
-                      Coming from the welding trades, I feel it has a similar scope albeit a different method.
-                    <br>
-                    <span><h2> Vision, Design, and Build a Quality Product</h2></span>
-              </p>
-            </div>
-          </v-col>
-        </v-row> 
-      </v-container>
-      <v-divider color="#e1bf74"></v-divider>
-      <v-container ref="projects">
-        <h1 style="color:#e1bf74">PROJECTS</h1>
-          <v-row
-            style="height:300px"
+          <!-- <v-navigation-drawer
+            v-model="drawer"
+            absolute
+            temporary>
+            <v-list dense>
+              <v-list-item
+                v-for="links in navLinks"
+                :key="links.id"
+              ><v-list-item-content
+                @click="scrollsTo('links.url')">
+                  <v-list-item-title>{{ links.name }}</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-navigation-drawer> -->
+          <v-main 
+            app
             align="center">
-            <v-col 
-              v-for="project in projects"
-              :key="project.id"
-              :project="project"
-              cols="12" sm="6" md="4" lg="4">
-                <v-hover v-slot="{ hover }">
-                  <v-card
-                    color="grey lighten-4"
-                    min-width="100"
-                    max-width="300"
-                    class="mx-auto">
-                      <v-img
-                        :aspect-ratio="16/9"
-                        :src="`${project.img}`">
-                          <v-expand-transition>
-                            <div
-                              v-if="hover"
-                              class="d-flex transition-slow-in-fast-out v-card--reveal text-h2"
-                              style="height: 100%; background-color:#e1bf74; font-color: #383838">
-                              {{project.name}}
-                            </div>
-                          </v-expand-transition>
-                      </v-img>
-                  </v-card>
-                </v-hover>
-            </v-col>
-          </v-row>
-        </v-container>
-        <v-divider color="#e1bf74"></v-divider>
-        <v-container
-          ref="skills"
-          cols="12">
-          <h1 style="color:#e1bf74">SKILLS</h1>
-          <v-divider color="#e1bf74"></v-divider>
-          <v-spacer></v-spacer>
-          <v-row
-            justify="start"
-            align="center"
-            >
-            <v-col
-              
-              xs="12" sm="4" md="4" lg="4">
-              <h3 style="color:#e1bf74">Programming Languages</h3>
+              <v-container fluid>
+                <v-row
+                  id="top-section"
+                  align="center"
+                  justify="center">
+                    <v-col 
+                      cols="12" 
+                      sm="4" 
+                      class="text-center">
+                        <h1 style="color:#e1bf74">Welcome!</h1>
+                          <p style="color:#e1bf74"> 
+                            I'm Grant Wielgosz a Full Stack Developer ready to make your idea become a reality!
+                          </p>
+                    </v-col>
+                    <v-col
+                      cols="12"
+                      sm="8"
+                      align="center">
+                        <v-avatar
+                          id="hero-img"
+                          size="250"
+                          >
+                            <v-img
+                              :src="require('../src/assets/profile-pic.jpg')"/>
+                        </v-avatar>
+                    </v-col>
+                </v-row>
               <v-divider color="#e1bf74"></v-divider>
-
-              <v-avatar
-                v-for="language, i in programmingIcons"
-                :key="i"
-                :language="language"
-                >
-                <v-spacer></v-spacer>
-                <v-img
-                  width="50"
-                  height="50"
-                  :src="language.logo">
-                </v-img>
-              </v-avatar>
-            </v-col>
-          </v-row>
-            <v-row
-              justify="center">
-            <v-col
-              
-              xs="12" sm="4" md="4" lg="4">
-              <h3 style="color:#e1bf74">Frameworks</h3>
+                <h1 style="color:#e1bf74">ABOUT</h1>
+                <v-row
+                  ref="about"
+                  align="center">
+                  <v-col>
+                    <div>
+                      <p style="color:#e1bf74">A recent graduate of Innotech College with a Full Stack Web Developer diploma!
+                            <br>
+                              Over the last few years I've grown a passion for coding and made the commitment to switch up careers.
+                            <br>
+                              Coming from the welding trades, I feel it has a similar scope albeit a different method.
+                            <br>
+                            <span><h2> Vision, Design, and Build a Quality Product</h2></span>
+                      </p>
+                    </div>
+                  </v-col>
+                </v-row>
               <v-divider color="#e1bf74"></v-divider>
-              <v-avatar
-                v-for="framework, n in frameworks"
-                :key="n"
-                :framework="framework"
-                >
-                <v-img 
-                  width="50"
-                  height="50"
-                  :src="framework.logo">
-                </v-img>
-              </v-avatar>
-            </v-col>
-            </v-row>
-            <v-row
-              justify="end">
-            <v-col
-              xs="12" sm="4" md="4" lg="4">
-              <h3 style="color:#e1bf74">Deployment Tools</h3>
-              <v-divider color="#e1bf74"></v-divider>
-              <v-avatar
-                v-for="tool, j in deploymentTools"
-                :key="j"
-                :tool="tool"
-                >
-                <v-img 
-                  width="100"
-                  height="100"
-                  :src="tool.logo">
-                </v-img>
-              </v-avatar>
-            </v-col>
-          </v-row>
-        </v-container>
-        <v-divider color="#e1bf74"></v-divider>
-        <v-container ref="contact">
-          <h1 style="color:#e1bf74">CONTACT</h1>
-          <v-row
-            style="height: 500px"
-            align="center"
-            justify="center">
-              <v-col cols="12" sm="6" md="4" lg="4">
-                  <v-card
-                    style=" background-color:#383838"
-                    elevation="0"
-                    cols="12"
+                <h1 ref="projects" style="color:#e1bf74">PROJECTS</h1>
+                  <v-row
+                    align="center">
+                    <v-col 
+                      v-for="project in projects"
+                      :key="project.id"
+                      :project="project"
+                      cols="12" sm="6" md="4" lg="4">
+                        <v-hover v-slot="{ hover }">
+                          <v-card
+                            color="grey lighten-4"
+                            min-width="100"
+                            max-width="300"
+                            class="mx-auto">
+                              <v-img
+                                :aspect-ratio="16/9"
+                                :src="`${project.img}`">
+                                  <v-expand-transition>
+                                    <div
+                                      v-if="hover"
+                                      class="d-flex transition-slow-in-fast-out v-card--reveal text-h2"
+                                      style="height: 100%; background-color:#e1bf74; font-color: #383838">
+                                      {{project.name}}
+                                    </div>
+                                  </v-expand-transition>
+                              </v-img>
+                          </v-card>
+                        </v-hover>
+                    </v-col>
+                  </v-row>
+                <v-divider color="#e1bf74"></v-divider>
+                  
+                  <h1 ref="skills" style="color:#e1bf74">SKILLS</h1>
+                  <v-divider color="#e1bf74"></v-divider>
+                  <v-spacer></v-spacer>
+                  <v-row
+                    justify="start"
+                    align="center"
                     >
-                    <v-text-field
-                        color="#e1bf74"
-                        v-model="firstName"
-                        type="text"
-                        outlined
-                        placeholder="First name..."></v-text-field>
-                      <v-text-field
-                        color="#e1bf74"
-                        v-model="companyName"
-                        type="text"
-                        outlined
-                        placeholder="Company name..."></v-text-field>
-                    <v-text-field
-                        color="#e1bf74"
-                        v-model="email"
-                        type="email" 
-                        outlined
-                        placeholder="Email..."></v-text-field>
-                    <v-textarea
-                        color="#e1bf74"
-                        v-model="comment"
-                        type="comment" 
-                        outlined
-                        placeholder="Leave a comment..."></v-textarea>
-                    <v-spacer></v-spacer>
-                    <v-card-actions>
-                      <v-btn @click="postComment(firstName, companyName, email, comment)">Add Review</v-btn>
-                    </v-card-actions>
-                  </v-card>
-              </v-col>
-              <v-spacer></v-spacer>
-              <v-divider vertical inset color="#e1bf74"></v-divider>
-              <v-spacer></v-spacer>
-              <v-col
-                  xs="12" sm="6" md="4" lg="4">
-                  <h2 style="color:#e1bf74">Grant Wielgosz</h2>
-                  <v-divider></v-divider>
-                  <h4 style="color:#e1bf74">Edmonton, Alberta</h4>
-                  <v-divider></v-divider>
-                  <h4 style="color:#e1bf74">wieltonwebdev@gmail.com</h4>
-                  <v-divider></v-divider>
-                  <p style="color:#e1bf74">Please contact me for more info!</p>
-                  <v-avatar
-                    v-for="link, index in socialIcons"
-                    :key="index"
-                    :link="link"
-                    >
-                    <v-card
-                      elevation="0">
-                    <v-img
-                      width="50"
-                      height="50"
-                      :src="link.logo">
-                    </v-img>
-                    </v-card>
-                  </v-avatar>
-
-                </v-col>
-
-          </v-row>
-        </v-container>
-    </v-main>
+                    <v-col
+                      xs="12" sm="4" md="4" lg="4">
+                      <h3 style="color:#e1bf74">Programming Languages</h3>
+                      <v-divider color="#e1bf74"></v-divider>
+                      <v-avatar
+                        v-for="language, i in programmingIcons"
+                        :key="i"
+                        :language="language"
+                        >
+                        <v-spacer></v-spacer>
+                        <v-img
+                          width="50"
+                          height="50"
+                          :src="language.logo">
+                        </v-img>
+                      </v-avatar>
+                    </v-col>
+                  </v-row>
+                    <v-row
+                      justify="center">
+                    <v-col
+                      
+                      xs="12" sm="4" md="4" lg="4">
+                      <h3 style="color:#e1bf74">Frameworks</h3>
+                      <v-divider color="#e1bf74"></v-divider>
+                      <v-avatar
+                        v-for="framework, n in frameworks"
+                        :key="n"
+                        :framework="framework"
+                        >
+                        <v-img 
+                          width="50"
+                          height="50"
+                          :src="framework.logo">
+                        </v-img>
+                      </v-avatar>
+                    </v-col>
+                    </v-row>
+                    <v-row
+                      justify="end">
+                    <v-col
+                      xs="12" sm="4" md="4" lg="4">
+                      <h3 style="color:#e1bf74">Deployment Tools</h3>
+                      <v-divider color="#e1bf74"></v-divider>
+                      <v-avatar
+                        v-for="tool, j in deploymentTools"
+                        :key="j"
+                        :tool="tool"
+                        >
+                        <v-img 
+                          width="100"
+                          height="100"
+                          :src="tool.logo">
+                        </v-img>
+                      </v-avatar>
+                    </v-col>
+                  </v-row>
+                <v-divider color="#e1bf74"></v-divider>
+                  <h1 ref="contact" style="color:#e1bf74">CONTACT</h1>
+                  <v-row
+                    align="center"
+                    justify="center">
+                      <v-col cols="12" sm="6" md="4" lg="4">
+                          <v-card
+                            style=" background-color:#383838"
+                            elevation="0"
+                            cols="12"
+                            >
+                            <v-text-field
+                                color="#e1bf74"
+                                v-model="firstName"
+                                type="text"
+                                outlined
+                                placeholder="First name..."></v-text-field>
+                              <v-text-field
+                                color="#e1bf74"
+                                v-model="companyName"
+                                type="text"
+                                outlined
+                                placeholder="Company name..."></v-text-field>
+                            <v-text-field
+                                color="#e1bf74"
+                                v-model="email"
+                                type="email" 
+                                outlined
+                                placeholder="Email..."></v-text-field>
+                            <v-textarea
+                                color="#e1bf74"
+                                v-model="comment"
+                                type="comment" 
+                                outlined
+                                placeholder="Leave a comment..."></v-textarea>
+                            <v-spacer></v-spacer>
+                            <v-card-actions>
+                              <v-btn @click="postComment(firstName, companyName, email, comment)">Add Review</v-btn>
+                            </v-card-actions>
+                          </v-card>
+                      </v-col>
+                      <v-spacer></v-spacer>
+                      <v-divider vertical inset color="#e1bf74"></v-divider>
+                      <v-spacer></v-spacer>
+                      <v-col
+                          xs="12" sm="6" md="4" lg="4">
+                          <h2 style="color:#e1bf74">Grant Wielgosz</h2>
+                          <v-divider></v-divider>
+                          <h4 style="color:#e1bf74">Edmonton, Alberta</h4>
+                          <v-divider></v-divider>
+                          <h4 style="color:#e1bf74">wieltonwebdev@gmail.com</h4>
+                          <v-divider></v-divider>
+                          <p style="color:#e1bf74">Please contact me for more info!</p>
+                          <v-avatar
+                            v-for="link, index in socialIcons"
+                            :key="index"
+                            :link="link"
+                            >
+                            <v-card
+                              elevation="0">
+                            <v-img
+                              width="50"
+                              height="50"
+                              :src="link.logo">
+                            </v-img>
+                            </v-card>
+                          </v-avatar>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+    
   </v-app>
 </template>
 
