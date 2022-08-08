@@ -265,14 +265,19 @@
                             :key="index"
                             :link="link"
                             >
+                            <a :href="link.link">
                             <v-card
-                              elevation="0">
+                              elevation="0"
+                              
+                              >
+                              
                             <v-img
                               width="50"
                               height="50"
                               :src="link.logo">
                             </v-img>
                             </v-card>
+                            </a>
                           </v-avatar>
                         </v-col>
                     </v-row>
@@ -326,8 +331,8 @@ export default {
           {name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg'}
         ],
       socialIcons: [
-        {name: 'Linkedin', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg'},
-        {name: 'Github',logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'},
+        {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg'},
+        {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'},
         ],
       deploymentTools: [
         {name: 'GoogleCloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
