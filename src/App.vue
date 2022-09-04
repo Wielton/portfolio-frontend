@@ -1,52 +1,8 @@
 <template>
 
-  <v-app id="app" style="background-color:#383838">
-    <v-app-bar
-            app
-            fixed
-            color="#383838"
-            elevate-on-scroll
-            dense
-            >
-            <v-btn
-              class="mx-2"
-              ripple
-              small
-              fab
-              color="#383838"
-              elevation="0"
-              @click="scrollsTo('top-section')"
-              >
-              <img
-              :src="require('../src/assets/yelllow-transparent.png')"
-              width="75"
-              >
-            </v-btn>
-          <v-spacer></v-spacer>
-            <v-tabs
-              right
-              color="#e1bf74"
-              class="hidden-sm-and-down"
-              >
-              <v-tab @click="scrollsTo('about')">ABOUT
-              </v-tab>
-              <v-tab @click="scrollsTo('projects')">PROJECTS
-              </v-tab>
-              <v-tab @click="scrollsTo('skills')">SKILLS
-              </v-tab>
-              <v-tab @click="scrollsTo('contact')">CONTACT
-              </v-tab>
-            </v-tabs>
-            <!-- <v-btn
-              @click="drawer = !drawer"
-              style="background-color:#383838"
-              max-width="50"
-              elevation="0"
-              class="hidden-md-and-up"
-              >
-              <v-icon  style="color:#e1bf74">mdi-menu</v-icon>
-            </v-btn> -->
-          </v-app-bar>
+  <v-app id="app" class="app-container" style="background-color:#121315">
+    <AppbarComp />
+    <HeroComp />
           <!-- <v-navigation-drawer
             v-model="drawer"
             absolute
@@ -62,7 +18,8 @@
               </v-list-item>
             </v-list>
           </v-navigation-drawer> -->
-          <v-main 
+          <v-main
+            class="app-main"
             app
             align="center">
               <v-container fluid>
@@ -74,32 +31,27 @@
                       cols="12" 
                       sm="4" 
                       class="text-center">
-                        <h1 style="color:#e1bf74">Welcome!</h1>
-                          <p style="color:#e1bf74"> 
-                            I'm Grant Wielgosz a Full Stack Developer ready to make your idea become a reality!
+                        <h1 style="color:#5fadbe">Welcome!</h1>
+                          <p style="color:#5fadbe"> 
+                            I'm Grant Wielgosz, a Full Stack Developer ready to make your idea become a reality!
                           </p>
                     </v-col>
                     <v-col
                       cols="12"
                       sm="8"
                       align="center">
-                        <v-avatar
-                          id="hero-img"
-                          size="250"
-                          >
-                            <v-img
-                              :src="require('../src/assets/profile-pic.jpg')"/>
-                        </v-avatar>
+                        
                     </v-col>
                 </v-row>
-              <v-divider color="#e1bf74"></v-divider>
-                <h1 style="color:#e1bf74">ABOUT</h1>
+              <v-divider color="#5fadbe"></v-divider>
+                <h1 style="color:#5fadbe">ABOUT</h1>
                 <v-row
+                  id="about-section"
                   ref="about"
                   align="center">
                   <v-col>
                     <div>
-                      <p style="color:#e1bf74">A recent graduate of Innotech College with a Full Stack Web Developer diploma!
+                      <p style="color:#5fadbe">A recent graduate of Innotech College with a Full Stack Web Developer diploma!
                             <br>
                               Over the last few years I've grown a passion for coding and made the commitment to switch up careers.
                             <br>
@@ -110,9 +62,10 @@
                     </div>
                   </v-col>
                 </v-row>
-              <v-divider color="#e1bf74"></v-divider>
-                <h1 ref="projects" style="color:#e1bf74">PROJECTS</h1>
+              <v-divider color="#5fadbe"></v-divider>
+                <h1 ref="projects" style="color:#5fadbe">PROJECTS</h1>
                   <v-row
+                    id="projects-section"
                     align="center">
                     <v-col 
                       v-for="project in projects"
@@ -132,7 +85,7 @@
                                     <div
                                       v-if="hover"
                                       class="d-flex transition-slow-in-fast-out v-card--reveal text-h2"
-                                      style="height: 100%; background-color:#e1bf74; font-color: #383838">
+                                      style="height: 100%; background-color:#5fadbe; font-color: #383838">
                                       {{project.name}}
                                     </div>
                                   </v-expand-transition>
@@ -141,19 +94,20 @@
                         </v-hover>
                     </v-col>
                   </v-row>
-                <v-divider color="#e1bf74"></v-divider>
+                <v-divider color="#5fadbe"></v-divider>
                   
-                  <h1 ref="skills" style="color:#e1bf74">SKILLS</h1>
-                  <v-divider color="#e1bf74"></v-divider>
+                  <h1 ref="skills" style="color:#5fadbe">SKILLS</h1>
+                  <v-divider color="#5fadbe"></v-divider>
                   <v-spacer></v-spacer>
                   <v-row
+                    id="skills-section"
                     justify="start"
                     align="center"
                     >
                     <v-col
                       xs="12" sm="4" md="4" lg="4">
-                      <h3 style="color:#e1bf74">Programming Languages</h3>
-                      <v-divider color="#e1bf74"></v-divider>
+                      <h3 style="color:#5fadbe">Programming Languages</h3>
+                      <v-divider color="#5fadbe"></v-divider>
                       <v-avatar
                         v-for="language, i in programmingIcons"
                         :key="i"
@@ -173,8 +127,8 @@
                     <v-col
                       
                       xs="12" sm="4" md="4" lg="4">
-                      <h3 style="color:#e1bf74">Frameworks</h3>
-                      <v-divider color="#e1bf74"></v-divider>
+                      <h3 style="color:#5fadbe">Frameworks</h3>
+                      <v-divider color="#5fadbe"></v-divider>
                       <v-avatar
                         v-for="framework, n in frameworks"
                         :key="n"
@@ -192,8 +146,8 @@
                       justify="end">
                     <v-col
                       xs="12" sm="4" md="4" lg="4">
-                      <h3 style="color:#e1bf74">Deployment Tools</h3>
-                      <v-divider color="#e1bf74"></v-divider>
+                      <h3 style="color:#5fadbe">Deployment Tools</h3>
+                      <v-divider color="#5fadbe"></v-divider>
                       <v-avatar
                         v-for="tool, j in deploymentTools"
                         :key="j"
@@ -207,9 +161,10 @@
                       </v-avatar>
                     </v-col>
                   </v-row>
-                <v-divider color="#e1bf74"></v-divider>
-                  <h1 ref="contact" style="color:#e1bf74">CONTACT</h1>
+                <v-divider color="#5fadbe"></v-divider>
+                  <h1 ref="contact" style="color:#5fadbe">CONTACT</h1>
                   <v-row
+                    id="contact-section"
                     align="center"
                     justify="center">
                       <v-col cols="12" sm="6" md="4" lg="4">
@@ -219,25 +174,25 @@
                             cols="12"
                             >
                             <v-text-field
-                                color="#e1bf74"
+                                color="#5fadbe"
                                 v-model="firstName"
                                 type="text"
                                 outlined
                                 placeholder="First name..."></v-text-field>
                               <v-text-field
-                                color="#e1bf74"
+                                color="#5fadbe"
                                 v-model="companyName"
                                 type="text"
                                 outlined
                                 placeholder="Company name..."></v-text-field>
                             <v-text-field
-                                color="#e1bf74"
+                                color="#5fadbe"
                                 v-model="email"
                                 type="email" 
                                 outlined
                                 placeholder="Email..."></v-text-field>
                             <v-textarea
-                                color="#e1bf74"
+                                color="#5fadbe"
                                 v-model="comment"
                                 type="comment" 
                                 outlined
@@ -249,17 +204,17 @@
                           </v-card>
                       </v-col>
                       <v-spacer></v-spacer>
-                      <v-divider vertical inset color="#e1bf74"></v-divider>
+                      <v-divider vertical inset color="#5fadbe"></v-divider>
                       <v-spacer></v-spacer>
                       <v-col
                           xs="12" sm="6" md="4" lg="4">
-                          <h2 style="color:#e1bf74">Grant Wielgosz</h2>
+                          <h2 style="color:#5fadbe">Grant Wielgosz</h2>
                           <v-divider></v-divider>
-                          <h4 style="color:#e1bf74">Edmonton, Alberta</h4>
+                          <h4 style="color:#5fadbe">Edmonton, Alberta</h4>
                           <v-divider></v-divider>
-                          <h4 style="color:#e1bf74">wieltonwebdev@gmail.com</h4>
+                          <h4 style="color:#5fadbe">wieltonwebdev@gmail.com</h4>
                           <v-divider></v-divider>
-                          <p style="color:#e1bf74">Please contact me for more info!</p>
+                          <p style="color:#5fadbe">Please contact me for more info!</p>
                           <v-avatar
                             v-for="link, index in socialIcons"
                             :key="index"
@@ -290,22 +245,26 @@
 <script>
 import { mapActions } from 'pinia';
 import {useUserStore} from '@/store/index';
+import AppbarComp from './components/AppbarComp.vue';
+import HeroComp from './components/HeroComp.vue';
 
 export default {
+  components: { AppbarComp, HeroComp },
   name: 'App',
-
+  props: {
+    navLinks: [
+        { url: '#hero', name:"Home"},
+        { url: '#about', name: "About"},
+        { url: '#projects', name: "Projects"},
+        { url: '#contact', name: "Contact"}
+        ],
+  },
   data: () => ({
       drawer: false,
       firstName: '',
       companyName: '',
       email: '',
       comment: '',
-      navLinks: [
-        { url: '#hero', name:"Home"},
-        { url: '#about', name: "About"},
-        { url: '#projects', name: "Projects"},
-        { url: '#contact', name: "Contact"}
-      ],
       projects: [
         {name: 'Pokemon Battle', img: require('../src/assets/charBattle.png'), skill: "fa-brands fa-html5",id: 1},
         {name: 'reDraft Fantasy Football', img: require('../src/assets/redraft-home.png'), id: 2},
@@ -344,11 +303,7 @@ export default {
       ]
   }),
   methods: {
-    scrollsTo(refName) {
-    var element = this.$refs[refName];
-    var top = element.offsetTop;
-    window.scrollTo(0, top);
-  },
+    
   ...mapActions(useUserStore, ['postComment'])
   },
   computed: {
@@ -358,6 +313,15 @@ export default {
 };
 </script>
 <style lang="css" scoped>
+#app {
+  background-color: 
+#121315;
+}
+  
+  #top-section {
+    height: 80%;
+  }
+
   .v-card--reveal {
   align-items: center;
   bottom: 0;
