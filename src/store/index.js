@@ -15,10 +15,10 @@ export const useUserStore = defineStore('user',{
                 url:process.env.VUE_APP_API_URL+"user",
                 method : "POST",
                 data: {
-                  firstName,
-                  companyName,
-                  email,
-                  comment
+                    firstName,
+                    companyName,
+                    email,
+                    comment
                 }
                 
             }).then((response)=>{

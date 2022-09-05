@@ -106,20 +106,8 @@
                     >
                     <v-col
                       xs="12" sm="4" md="4" lg="4">
-                      <h3 style="color:#5fadbe">Programming Languages</h3>
+                      <LanguagesComp />
                       <v-divider color="#5fadbe"></v-divider>
-                      <v-avatar
-                        v-for="language, i in programmingIcons"
-                        :key="i"
-                        :language="language"
-                        >
-                        <v-spacer></v-spacer>
-                        <v-img
-                          width="50"
-                          height="50"
-                          :src="language.logo">
-                        </v-img>
-                      </v-avatar>
                     </v-col>
                   </v-row>
                     <v-row
@@ -127,38 +115,14 @@
                     <v-col
                       
                       xs="12" sm="4" md="4" lg="4">
-                      <h3 style="color:#5fadbe">Frameworks</h3>
-                      <v-divider color="#5fadbe"></v-divider>
-                      <v-avatar
-                        v-for="framework, n in frameworks"
-                        :key="n"
-                        :framework="framework"
-                        >
-                        <v-img 
-                          width="50"
-                          height="50"
-                          :src="framework.logo">
-                        </v-img>
-                      </v-avatar>
+                      <FrameworksComp />
                     </v-col>
                     </v-row>
                     <v-row
                       justify="end">
                     <v-col
                       xs="12" sm="4" md="4" lg="4">
-                      <h3 style="color:#5fadbe">Deployment Tools</h3>
-                      <v-divider color="#5fadbe"></v-divider>
-                      <v-avatar
-                        v-for="tool, j in deploymentTools"
-                        :key="j"
-                        :tool="tool"
-                        >
-                        <v-img 
-                          width="100"
-                          height="100"
-                          :src="tool.logo">
-                        </v-img>
-                      </v-avatar>
+                      <DeploymentComp />
                     </v-col>
                   </v-row>
                 <v-divider color="#5fadbe"></v-divider>
@@ -247,9 +211,12 @@ import { mapActions } from 'pinia';
 import {useUserStore} from '@/store/index';
 import AppbarComp from './components/AppbarComp.vue';
 import HeroComp from './components/HeroComp.vue';
+import LanguagesComp from './components/LanguagesComp.vue';
+import FrameworksComp from './components/FrameworksComp.vue';
+import DeploymentComp from './components/DeploymentComp.vue';
 
 export default {
-  components: { AppbarComp, HeroComp },
+  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp },
   name: 'App',
   props: {
     navLinks: [
@@ -277,30 +244,12 @@ export default {
         'space-around',
         'space-between',
       ],
-      programmingIcons: [
-        {name: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'},
-        {name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'},
-        {name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'},
-        {name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
-        {name: 'mySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'}
-        ],
-      frameworks: [
-          {name: 'Vue', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg'},
-          {name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'},
-          {name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg'}
-        ],
+      
       socialIcons: [
         {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg'},
         {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'},
         ],
-      deploymentTools: [
-        {name: 'GoogleCloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
-        {name: 'Apache', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg'},
-        {name: 'Debian', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg'},
-        {name: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'},
-        {name: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg'},
-        {name: 'ssh', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ssh/ssh-original.svg'}
-      ]
+      
   }),
   methods: {
     
