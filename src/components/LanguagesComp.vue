@@ -5,21 +5,20 @@
                 <h1>Languages</h1>
             </v-col>
         </v-row>
+            <v-divider color="#5fadbe"></v-divider>
         <v-row>
             <v-col>
-                <v-list color="#121315">
+                <v-list class='list-styling' color="#121315">
                     <v-list-item
                         v-for='(language, index) in programmingIcons'
                         :key='index'
                         :language='language'
                         >
-                        <v-list-item-avatar>
-                            <v-img
-                                :src='language.logo'
+                        <!-- <v-list-item-avatar>
+                            <font-awesome-icon :src='language.icon' :icon='language.icon'
                                 >
-                                </v-img>
-                            {{language.logo}}
-                        </v-list-item-avatar>
+                                </font-awesome-icon>
+                        </v-list-item-avatar> -->
                         <v-list-item-title class='language-text'>
                             {{language.name}}
                         </v-list-item-title>
@@ -36,7 +35,7 @@
         name: 'LanguagesComp',
         data: () => ({
             programmingIcons: [
-                    {name: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'},
+                    {name: 'HTML5', logo: ''},
                     {name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'},
                     {name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'},
                     {name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
@@ -47,6 +46,9 @@
 </script>
 
 <style lang="scss" scoped>
+.list-styling {
+    border: 1px solid #5fadbe;
+}
     h1 {
         color: #5fadbe
     }

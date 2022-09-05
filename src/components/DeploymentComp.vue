@@ -5,21 +5,25 @@
                 <h1>Deployment Tools</h1>
             </v-col>
         </v-row>
+            <v-divider color="#5fadbe"></v-divider>
+
         <v-row>
             <v-col>
-                <v-list color="#121315">
+                <v-list 
+                    border='1px 1px solid #121315'
+                    color="#121315">
                     <v-list-item
                         v-for='(tool, index) in deploymentTools'
                         :key='index'
                         :tool='tool'
                         >
-                        <v-list-item-avatar>
+                        <!-- <v-list-item-avatar>
                             <v-img
                                 :src='tool.logo'
                                 >
                                 </v-img>
                             {{tool.logo}}
-                        </v-list-item-avatar>
+                        </v-list-item-avatar> -->
                         <v-list-item-title class='language-text'>
                             {{tool.name}}
                         </v-list-item-title>

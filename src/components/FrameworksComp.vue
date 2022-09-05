@@ -5,6 +5,8 @@
                 <h1>Frameworks</h1>
             </v-col>
         </v-row>
+            <v-divider color="#5fadbe"></v-divider>
+
         <v-row>
             <v-col>
                 <v-list color="#121315">
@@ -13,13 +15,13 @@
                         :key='index'
                         :framework='framework'
                         >
-                        <v-list-item-avatar>
+                        <!-- <v-list-item-avatar>
                             <v-img
                                 :src='framework.logo'
                                 >
                                 </v-img>
                             {{framework.logo}}
-                        </v-list-item-avatar>
+                        </v-list-item-avatar> -->
                         <v-list-item-title class='language-text'>
                             {{framework.name}}
                         </v-list-item-title>

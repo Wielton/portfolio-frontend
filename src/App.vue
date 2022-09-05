@@ -31,9 +31,9 @@
                       cols="12" 
                       sm="4" 
                       class="text-center">
-                        <h1 style="color:#5fadbe">Welcome!</h1>
+                        <h1 style="color:#5fadbe"></h1>
                           <p style="color:#5fadbe"> 
-                            I'm Grant Wielgosz, a Full Stack Developer ready to make your idea become a reality!
+                            
                           </p>
                     </v-col>
                     <v-col
@@ -43,7 +43,7 @@
                         
                     </v-col>
                 </v-row>
-              <v-divider color="#5fadbe"></v-divider>
+              <!-- <v-divider color="#5fadbe"></v-divider> -->
                 <h1 style="color:#5fadbe">ABOUT</h1>
                 <v-row
                   id="about-section"
@@ -51,18 +51,13 @@
                   align="center">
                   <v-col>
                     <div>
-                      <p style="color:#5fadbe">A recent graduate of Innotech College with a Full Stack Web Developer diploma!
-                            <br>
-                              Over the last few years I've grown a passion for coding and made the commitment to switch up careers.
-                            <br>
-                              Coming from the welding trades, I feel it has a similar scope albeit a different method.
-                            <br>
-                            <span><h2> Vision, Design, and Build a Quality Product</h2></span>
-                      </p>
+                      <h3 style="color:#5fadbe">
+                            
+                      </h3>
                     </div>
                   </v-col>
                 </v-row>
-              <v-divider color="#5fadbe"></v-divider>
+              <!-- <v-divider color="#5fadbe"></v-divider> -->
                 <h1 ref="projects" style="color:#5fadbe">PROJECTS</h1>
                   <v-row
                     id="projects-section"
@@ -94,10 +89,10 @@
                         </v-hover>
                     </v-col>
                   </v-row>
-                <v-divider color="#5fadbe"></v-divider>
+                  <!-- <v-divider color="#5fadbe"></v-divider> -->
                   
                   <h1 ref="skills" style="color:#5fadbe">SKILLS</h1>
-                  <v-divider color="#5fadbe"></v-divider>
+                  <!-- <v-divider color="#5fadbe"></v-divider> -->
                   <v-spacer></v-spacer>
                   <v-row
                     id="skills-section"
@@ -107,7 +102,7 @@
                     <v-col
                       xs="12" sm="4" md="4" lg="4">
                       <LanguagesComp />
-                      <v-divider color="#5fadbe"></v-divider>
+                      <!-- <v-divider color="#5fadbe"></v-divider> -->
                     </v-col>
                   </v-row>
                     <v-row
@@ -132,53 +127,17 @@
                     align="center"
                     justify="center">
                       <v-col cols="12" sm="6" md="4" lg="4">
-                          <v-card
-                            style=" background-color:#383838"
-                            elevation="0"
-                            cols="12"
-                            >
-                            <v-text-field
-                                color="#5fadbe"
-                                v-model="firstName"
-                                type="text"
-                                outlined
-                                placeholder="First name..."></v-text-field>
-                              <v-text-field
-                                color="#5fadbe"
-                                v-model="companyName"
-                                type="text"
-                                outlined
-                                placeholder="Company name..."></v-text-field>
-                            <v-text-field
-                                color="#5fadbe"
-                                v-model="email"
-                                type="email" 
-                                outlined
-                                placeholder="Email..."></v-text-field>
-                            <v-textarea
-                                color="#5fadbe"
-                                v-model="comment"
-                                type="comment" 
-                                outlined
-                                placeholder="Leave a comment..."></v-textarea>
-                            <v-spacer></v-spacer>
-                            <v-card-actions>
-                              <v-btn @click="postComment(firstName, companyName, email, comment)">Add Review</v-btn>
-                            </v-card-actions>
-                          </v-card>
+                          <ContactComp />
                       </v-col>
-                      <v-spacer></v-spacer>
-                      <v-divider vertical inset color="#5fadbe"></v-divider>
-                      <v-spacer></v-spacer>
                       <v-col
                           xs="12" sm="6" md="4" lg="4">
                           <h2 style="color:#5fadbe">Grant Wielgosz</h2>
                           <v-divider></v-divider>
                           <h4 style="color:#5fadbe">Edmonton, Alberta</h4>
                           <v-divider></v-divider>
-                          <h4 style="color:#5fadbe">wieltonwebdev@gmail.com</h4>
+                          <h4 style="color:#5fadbe">grantWielgosz@gmail.com</h4>
                           <v-divider></v-divider>
-                          <p style="color:#5fadbe">Please contact me for more info!</p>
+                          <!-- <p style="color:#5fadbe">Please contact me for more info!</p> -->
                           <v-avatar
                             v-for="link, index in socialIcons"
                             :key="index"
@@ -207,16 +166,15 @@
 </template>
 
 <script>
-import { mapActions } from 'pinia';
-import {useUserStore} from '@/store/index';
 import AppbarComp from './components/AppbarComp.vue';
 import HeroComp from './components/HeroComp.vue';
 import LanguagesComp from './components/LanguagesComp.vue';
 import FrameworksComp from './components/FrameworksComp.vue';
 import DeploymentComp from './components/DeploymentComp.vue';
+import ContactComp from './components/ContactComp.vue';
 
 export default {
-  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp },
+  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp, ContactComp },
   name: 'App',
   props: {
     navLinks: [
@@ -251,10 +209,7 @@ export default {
         ],
       
   }),
-  methods: {
-    
-  ...mapActions(useUserStore, ['postComment'])
-  },
+  
   computed: {
     
   }
