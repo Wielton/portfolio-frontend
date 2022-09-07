@@ -26,7 +26,12 @@ export const useUserStore = defineStore('user',{
             }).catch((error)=>{
                 console.log(error);
             })
-        }
+        },
+        scrollsTo(refName) {
+            var element = this.$refs[refName];
+            var top = element.offsetTop;
+            window.scrollTo(0, top);
+        },
         
     },
     

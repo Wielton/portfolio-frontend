@@ -15,13 +15,14 @@
                         :key='index'
                         :framework='framework'
                         >
-                        <!-- <v-list-item-avatar>
-                            <v-img
+                        <v-list-item-avatar>
+                            <Icon
                                 :src='framework.logo'
+                                :icon='framework.logo'
+                                color="#5fadbe"
                                 >
-                                </v-img>
-                            {{framework.logo}}
-                        </v-list-item-avatar> -->
+                                </Icon>
+                        </v-list-item-avatar>
                         <v-list-item-title class='language-text'>
                             {{framework.name}}
                         </v-list-item-title>
@@ -34,12 +35,15 @@
 </template>
 
 <script>
+import { Icon } from '@iconify/vue2';
     export default {
+        components: { Icon },
         data: () => ({
+            
             frameworks: [
-                {name: 'Vue', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg'},
-                {name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'},
-                {name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg'}
+                {name: 'Vue', logo: 'mdi:vuejs'},
+                {name: 'React', logo: 'mdi:react'},
+                {name: 'Flask', logo: ''}
             ],
         })
     }

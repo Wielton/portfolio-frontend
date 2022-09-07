@@ -17,13 +17,14 @@
                         :key='index'
                         :tool='tool'
                         >
-                        <!-- <v-list-item-avatar>
-                            <v-img
+                        <v-list-item-avatar>
+                            <Icon
                                 :src='tool.logo'
+                                :icon='tool.logo'
+                                color="#5fadbe"
                                 >
-                                </v-img>
-                            {{tool.logo}}
-                        </v-list-item-avatar> -->
+                                </Icon>
+                        </v-list-item-avatar>
                         <v-list-item-title class='language-text'>
                             {{tool.name}}
                         </v-list-item-title>
@@ -36,16 +37,18 @@
 </template>
 
 <script>
+import { Icon } from '@iconify/vue2';
     export default {
+        components: { Icon },
         name: 'LanguagesComp',
         data: () => ({
             deploymentTools: [
                 {name: 'GoogleCloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
                 {name: 'Apache', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg'},
-                {name: 'Debian', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg'},
-                {name: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'},
-                {name: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg'},
-                {name: 'ssh', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ssh/ssh-original.svg'}
+                {name: 'Debian', logo: 'mdi:debian'},
+                {name: 'Linux', logo: 'mdi:linux'},
+                {name: 'Bash', logo: 'mdi:bash'},
+                {name: 'ssh', logo: 'mdi:ssh'}
             ]
         })
     }

@@ -14,11 +14,11 @@
                         :key='index'
                         :language='language'
                         >
-                        <!-- <v-list-item-avatar>
-                            <font-awesome-icon :src='language.icon' :icon='language.icon'
+                        <v-list-item-avatar>
+                            <Icon :src='language.logo' :icon='language.logo' color="#5fadbe"
                                 >
-                                </font-awesome-icon>
-                        </v-list-item-avatar> -->
+                                </Icon>
+                        </v-list-item-avatar>
                         <v-list-item-title class='language-text'>
                             {{language.name}}
                         </v-list-item-title>
@@ -31,15 +31,17 @@
 </template>
 
 <script>
+    import { Icon } from '@iconify/vue2';
     export default {
         name: 'LanguagesComp',
+        components: { Icon },
         data: () => ({
             programmingIcons: [
-                    {name: 'HTML5', logo: ''},
-                    {name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'},
-                    {name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'},
-                    {name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
-                    {name: 'mySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'}
+                    {name: 'HTML5', logo: 'mdi:language-html5'},
+                    {name: 'CSS3', logo: 'mdi:language-css3'},
+                    {name: 'JavaScript', logo: 'mdi:language-javascript'},
+                    {name: 'Python', logo: 'mdi:language-python'},
+                    {name: 'mySQL', logo: 'mdi:database'}
                     ],
         })
     }
@@ -48,6 +50,7 @@
 <style lang="scss" scoped>
 .list-styling {
     border: 1px solid #5fadbe;
+
 }
     h1 {
         color: #5fadbe

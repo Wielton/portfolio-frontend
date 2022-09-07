@@ -1,23 +1,9 @@
 <template>
 
   <v-app id="app" class="app-container" style="background-color:#121315">
-    <AppbarComp />
-    <HeroComp />
-          <!-- <v-navigation-drawer
-            v-model="drawer"
-            absolute
-            temporary>
-            <v-list dense>
-              <v-list-item
-                v-for="links in navLinks"
-                :key="links.id"
-              ><v-list-item-content
-                @click="scrollsTo('links.url')">
-                  <v-list-item-title>{{ links.name }}</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-navigation-drawer> -->
+    <AppbarComp class="app-bar"/>
+    <HeroComp id="top-section" class="hero-main"/>
+    <!-- <PokemonComp /> -->
           <v-main
             class="app-main"
             app
@@ -144,52 +130,46 @@
                             :link="link"
                             >
                             <a :href="link.link">
-                            <v-card
-                              elevation="0"
+                            
                               
-                              >
-                              
-                            <v-img
+                            <Icon
+                              style="color:#5fadbe"
                               width="50"
                               height="50"
-                              :src="link.logo">
-                            </v-img>
-                            </v-card>
+                              :icon="link.logo">
+                            </Icon>
                             </a>
                           </v-avatar>
                         </v-col>
                     </v-row>
                 </v-container>
             </v-main>
+            
     
   </v-app>
 </template>
 
 <script>
+import { Icon } from '@iconify/vue2';
 import AppbarComp from './components/AppbarComp.vue';
 import HeroComp from './components/HeroComp.vue';
 import LanguagesComp from './components/LanguagesComp.vue';
 import FrameworksComp from './components/FrameworksComp.vue';
 import DeploymentComp from './components/DeploymentComp.vue';
 import ContactComp from './components/ContactComp.vue';
+import { useUserStore } from './store';
+import {mapActions} from 'pinia';
+// import PokemonComp from './components/pokemon/PokemonComp.vue';
+
 
 export default {
-  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp, ContactComp },
+  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp, ContactComp, Icon },
   name: 'App',
   props: {
-    navLinks: [
-        { url: '#hero', name:"Home"},
-        { url: '#about', name: "About"},
-        { url: '#projects', name: "Projects"},
-        { url: '#contact', name: "Contact"}
-        ],
+    
   },
   data: () => ({
       drawer: false,
-      firstName: '',
-      companyName: '',
-      email: '',
-      comment: '',
       projects: [
         {name: 'Pokemon Battle', img: require('../src/assets/charBattle.png'), skill: "fa-brands fa-html5",id: 1},
         {name: 'reDraft Fantasy Football', img: require('../src/assets/redraft-home.png'), id: 2},
@@ -204,12 +184,14 @@ export default {
       ],
       
       socialIcons: [
-        {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg'},
-        {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'},
+        {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'mdi:linkedin'},
+        {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'mdi:github'},
         ],
       
   }),
-  
+  methods: {
+    ...mapActions(useUserStore, ['scrollsTo'])
+  },
   computed: {
     
   }
@@ -225,7 +207,10 @@ export default {
   #top-section {
     height: 80%;
   }
-
+.app-bar {
+        height: 10vh;
+    }
+    
   .v-card--reveal {
   align-items: center;
   bottom: 0;
@@ -234,10 +219,10 @@ export default {
   position: absolute;
   width: 100%;
 }
-  #hero {
-    height: 600px;
-    
-  }
+.hero-main {
+        width: 100%;
+        height: 50vh;
+    }
   /* #hero-h3 {
     display: inline-block;
     position: relative;
