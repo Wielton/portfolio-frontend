@@ -10,35 +10,13 @@
             align="center">
               <v-container fluid>
                 
-              <!-- <v-divider color="#5fadbe"></v-divider> -->
+              <v-divider color="#5fadbe"></v-divider>
                 <AboutComp />
-              <!-- <v-divider color="#5fadbe"></v-divider> -->
+              <v-divider color="#5fadbe"></v-divider>
                 <ProjectsComp />
-                  <!-- <v-divider color="#5fadbe"></v-divider> -->
+                  <v-divider color="#5fadbe"></v-divider>
                   
-                  <h1 ref="skills" style="color:#5fadbe">SKILLS</h1>
-                  <!-- <v-divider color="#5fadbe"></v-divider> -->
-                  <v-spacer></v-spacer>
-                  <v-row
-                    id="skills-section"
-                    justify="start"
-                    align="center"
-                    >
-                    <v-col
-                      xs="12" sm="4" md="4" lg="4">
-                      <LanguagesComp />
-                      <!-- <v-divider color="#5fadbe"></v-divider> -->
-                    </v-col>
-                    <v-col
-                      
-                      xs="12" sm="4" md="4" lg="4">
-                      <FrameworksComp />
-                    </v-col>
-                    <v-col
-                      xs="12" sm="4" md="4" lg="4">
-                      <DeploymentComp />
-                    </v-col>
-                  </v-row>
+                  
                     <!-- <v-row
                       justify="center">
                     
@@ -95,9 +73,7 @@
 import { Icon } from '@iconify/vue2';
 import AppbarComp from './components/AppbarComp.vue';
 import HeroComp from './components/HeroComp.vue';
-import LanguagesComp from './components/LanguagesComp.vue';
-import FrameworksComp from './components/FrameworksComp.vue';
-import DeploymentComp from './components/DeploymentComp.vue';
+
 import ContactComp from './components/ContactComp.vue';
 import { useUserStore } from './store';
 import {mapActions} from 'pinia';
@@ -107,15 +83,13 @@ import ProjectsComp from './components/ProjectsComp.vue';
 
 
 export default {
-  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp, ContactComp, Icon, AboutComp, ProjectsComp },
+  components: { AppbarComp, HeroComp, ContactComp, Icon, AboutComp, ProjectsComp },
   name: 'App',
   props: {
     
   },
   data: () => ({
       drawer: false,
-      viewDetails: false,
-      
       justify: [
         'start',
         'center',

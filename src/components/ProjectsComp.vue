@@ -13,32 +13,25 @@
                         <v-card
                             color="grey lighten-4"
                             min-width="100"
-                            max-width="300"
-                            class="mx-auto">
+                            max-width="400"
+                            class="mx-auto projects-trans">
                             <v-img
                                 :aspect-ratio="16/9"
                                 :src="`${project.img}`">
                                 <v-expand-transition>
                                 <div
                                         v-if="hover"
-                                        class="d-flex transition-slow-in-fast-out v-card--reveal text-h2"
-                                        style="height: 100%; background-color:#5fadbe; font-color: #383838">
+                                        class="d-flex transition-slow-in-slow-out v-card--reveal text-h2"
+                                        style="height: 100%; background-image: linear-gradient(white, #5fadbe); opacity: 0.9; font-color: #383838">
                                         <v-card-subtitle>{{project.name}}</v-card-subtitle>
+                                        
                                         <v-card-actions>
-                                            <p>View the front end code on GitHub:</p>
-                                            <v-btn><a :href="project.gitLinkFE" target="/blank">VIEW</a></v-btn>
+                                            <v-card-text>Frontend code:</v-card-text>
+                                            <a :href='project.gitLinkFE' target="/blank"><v-btn class="btn">VIEW</v-btn></a>
+                                            <v-card-text>Backend code:</v-card-text>
+                                            <a :href='project.gitLinkBE' target="/blank"><v-btn class="btn">VIEW</v-btn></a>
                                         </v-card-actions>
-                                    <div>
-                                        <v-expand-x-transition>
-                                            <div
-                                                v-if="viewDetails">
-                                                <p
-                                                    class="description-content" 
-                                                    >{{project.description}}</p>
-                                            </div>
-                                        </v-expand-x-transition>
                                     </div>
-                                </div>
                             </v-expand-transition>
                         </v-img>
                     </v-card>
@@ -52,6 +45,7 @@
     export default {
         name: "ProjectsComponent",
         data: () => ({
+            viewDetails: false,
             projects: [
                 // {name: 'Pokemon Battle', img: require('../src/assets/charBattle.png'), skill: "fa-brands fa-html5", gitLink: ''},
                 {name: 'reDraft Fantasy Football', img: require('../assets/redraft-home.png'), gitLinkFE: 'https://github.com/Wielton/redraft-frontend', gitLinkBE: 'https://github.com/Wielton/redraft'},
@@ -62,5 +56,14 @@
 </script>
 
 <style lang="scss" scoped>
-
+    *a {
+        text-decoration: none;
+    }
+    .btn {
+        border: 3px solid white;
+        background-image: radial-gradient(#5fadbe, white);
+    }
+    .projects-trans {
+        display: grid;
+    }
 </style>
