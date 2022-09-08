@@ -2,7 +2,7 @@
     <v-container>
         <v-row>
             <v-col>
-                <h1>Deployment Tools</h1>
+                <h1>Deployment</h1>
             </v-col>
         </v-row>
             <v-divider color="#5fadbe"></v-divider>
@@ -47,7 +47,6 @@ import { Icon } from '@iconify/vue2';
                 {name: 'Apache', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg'},
                 {name: 'Debian', logo: 'mdi:debian'},
                 {name: 'Linux', logo: 'mdi:linux'},
-                {name: 'Bash', logo: 'mdi:bash'},
                 {name: 'ssh', logo: 'mdi:ssh'}
             ]
         })

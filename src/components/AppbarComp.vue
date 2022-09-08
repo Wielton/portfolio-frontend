@@ -1,7 +1,8 @@
 <template>
-<div>
+<div class="appbar">
     <v-app-bar
-            app
+            
+            
             fixed
             color="#121315"
             elevate-on-scroll
@@ -20,7 +21,7 @@
                     v-for="(link, index) in navLinks"
                     :key="index"
                     
-                    style="color:#5fadbe" @click="scrollsTo()">{{link.name}}
+                    style="color:#5fadbe" @click="scrollsTo(`${link.url}`)">{{link.name}}
                 </v-tab>
             </v-tabs>
             <v-btn
@@ -55,6 +56,8 @@
 </template>
 
 <script>
+import { useUserStore } from '@/store';
+import {mapActions} from 'pinia';
 export default {
     name: 'AppbarComp',
     data: () => ({
@@ -67,7 +70,7 @@ export default {
         ],
     }),
     methods: {
-        
+        ...mapActions(useUserStore, ['scrollsTo'])
     },
     computed: {
         
@@ -77,6 +80,10 @@ export default {
 </script>
 
 <style lang="scss">
+.appbar {
+    height: 10vh;
+
+}
 h1 {
     color: #5fadbe;
 }

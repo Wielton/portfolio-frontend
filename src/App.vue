@@ -1,80 +1,19 @@
 <template>
-
-  <v-app id="app" class="app-container" style="background-color:#121315">
-    <AppbarComp class="app-bar"/>
-    <HeroComp id="top-section" class="hero-main"/>
+<!-- <v-img :src="require('../src/assets/verticaljspic.jpg')"> -->
+  <v-app id="app" class="app-container">
+    <AppbarComp app/>
+    <HeroComp id="top-section"/>
     <!-- <PokemonComp /> -->
           <v-main
             class="app-main"
             app
             align="center">
               <v-container fluid>
-                <v-row
-                  id="top-section"
-                  align="center"
-                  justify="center">
-                    <v-col 
-                      cols="12" 
-                      sm="4" 
-                      class="text-center">
-                        <h1 style="color:#5fadbe"></h1>
-                          <p style="color:#5fadbe"> 
-                            
-                          </p>
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="8"
-                      align="center">
-                        
-                    </v-col>
-                </v-row>
+                
               <!-- <v-divider color="#5fadbe"></v-divider> -->
-                <h1 style="color:#5fadbe">ABOUT</h1>
-                <v-row
-                  id="about-section"
-                  ref="about"
-                  align="center">
-                  <v-col>
-                    <div>
-                      <h3 style="color:#5fadbe">
-                            
-                      </h3>
-                    </div>
-                  </v-col>
-                </v-row>
+                <AboutComp />
               <!-- <v-divider color="#5fadbe"></v-divider> -->
-                <h1 ref="projects" style="color:#5fadbe">PROJECTS</h1>
-                  <v-row
-                    id="projects-section"
-                    align="center">
-                    <v-col 
-                      v-for="project in projects"
-                      :key="project.id"
-                      :project="project"
-                      cols="12" sm="6" md="4" lg="4">
-                        <v-hover v-slot="{ hover }">
-                          <v-card
-                            color="grey lighten-4"
-                            min-width="100"
-                            max-width="300"
-                            class="mx-auto">
-                              <v-img
-                                :aspect-ratio="16/9"
-                                :src="`${project.img}`">
-                                  <v-expand-transition>
-                                    <div
-                                      v-if="hover"
-                                      class="d-flex transition-slow-in-fast-out v-card--reveal text-h2"
-                                      style="height: 100%; background-color:#5fadbe; font-color: #383838">
-                                      {{project.name}}
-                                    </div>
-                                  </v-expand-transition>
-                              </v-img>
-                          </v-card>
-                        </v-hover>
-                    </v-col>
-                  </v-row>
+                <ProjectsComp />
                   <!-- <v-divider color="#5fadbe"></v-divider> -->
                   
                   <h1 ref="skills" style="color:#5fadbe">SKILLS</h1>
@@ -90,22 +29,24 @@
                       <LanguagesComp />
                       <!-- <v-divider color="#5fadbe"></v-divider> -->
                     </v-col>
-                  </v-row>
-                    <v-row
-                      justify="center">
                     <v-col
                       
                       xs="12" sm="4" md="4" lg="4">
                       <FrameworksComp />
                     </v-col>
-                    </v-row>
-                    <v-row
-                      justify="end">
                     <v-col
                       xs="12" sm="4" md="4" lg="4">
                       <DeploymentComp />
                     </v-col>
                   </v-row>
+                    <!-- <v-row
+                      justify="center">
+                    
+                    </v-row>
+                    <v-row
+                      justify="end">
+                    
+                  </v-row> -->
                 <v-divider color="#5fadbe"></v-divider>
                   <h1 ref="contact" style="color:#5fadbe">CONTACT</h1>
                   <v-row
@@ -147,6 +88,7 @@
             
     
   </v-app>
+<!-- </v-img> -->
 </template>
 
 <script>
@@ -159,22 +101,21 @@ import DeploymentComp from './components/DeploymentComp.vue';
 import ContactComp from './components/ContactComp.vue';
 import { useUserStore } from './store';
 import {mapActions} from 'pinia';
+import AboutComp from './components/AboutComp.vue';
+import ProjectsComp from './components/ProjectsComp.vue';
 // import PokemonComp from './components/pokemon/PokemonComp.vue';
 
 
 export default {
-  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp, ContactComp, Icon },
+  components: { AppbarComp, HeroComp, LanguagesComp, FrameworksComp, DeploymentComp, ContactComp, Icon, AboutComp, ProjectsComp },
   name: 'App',
   props: {
     
   },
   data: () => ({
       drawer: false,
-      projects: [
-        {name: 'Pokemon Battle', img: require('../src/assets/charBattle.png'), skill: "fa-brands fa-html5",id: 1},
-        {name: 'reDraft Fantasy Football', img: require('../src/assets/redraft-home.png'), id: 2},
-        {name: 'Foodie: A Skip Clone', img: require('../src/assets/foodie.png'), id: 3}
-      ],
+      viewDetails: false,
+      
       justify: [
         'start',
         'center',
@@ -203,14 +144,8 @@ export default {
   background-color: 
 #121315;
 }
-  
-  #top-section {
-    height: 80%;
-  }
-.app-bar {
-        height: 10vh;
-    }
-    
+
+
   .v-card--reveal {
   align-items: center;
   bottom: 0;
@@ -219,10 +154,16 @@ export default {
   position: absolute;
   width: 100%;
 }
-.hero-main {
+/* .hero-main {
         width: 100%;
         height: 50vh;
-    }
+    } */
+
+.description-content {
+  display: flex;
+  
+  font-size: 1em;
+}
   /* #hero-h3 {
     display: inline-block;
     position: relative;

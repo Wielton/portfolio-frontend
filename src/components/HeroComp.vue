@@ -1,6 +1,7 @@
 <template>
     <v-container fluid>
                 <v-row
+                    class="border-styles"
                     align="center"
                     justify="center">
                         <v-col 
@@ -32,6 +33,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    
+    .border-styles {
+        border: 1px solid #5fadbe;
+        height: 40vh;
+        
+    }
 </style>
 
