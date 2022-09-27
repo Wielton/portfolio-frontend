@@ -13,6 +13,7 @@
                     border='1px 1px solid #121315'
                     color="#121315">
                     <v-list-item
+                        class="list-item"
                         v-for='(tool, index) in deploymentTools'
                         :key='index'
                         :tool='tool'
@@ -54,6 +55,9 @@ import { Icon } from '@iconify/vue2';
 </script>
 
 <style lang="scss" scoped>
+.list-item {
+    border: 1px solid #5fadbe;
+}
     h1 {
         color: #5fadbe
     }

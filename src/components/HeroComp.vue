@@ -1,23 +1,25 @@
 <template>
-    <v-container fluid>
+    <v-container app fluid class="home-hero">
                 <v-row
                     class="border-styles"
                     align="center"
                     justify="center">
                         <v-col 
-                        cols="12" 
-                        sm="4" 
-                        class="text-center">
-                            <h1 style="color:#5fadbe"></h1>
-                            <p style="color:#5fadbe"> 
-                                
-                            </p>
-                        </v-col>
-                        <v-col
                         cols="12"
-                        sm="8"
-                        align="center">
-                    </v-col>
+                        sm="4"
+                        md="6">
+                            <div class="hero-animation-div">
+                                <div class="hero-full-text"><h1 class="linear">FULL</h1></div>
+                                <div class="hero-stack-text"><h1 class="linear">STACK</h1></div>
+                                <div class="hero-development-text"><h1 class="linear">DEVELOPMENT</h1></div>
+                            </div>
+                        </v-col>
+                        <v-col>
+                            <div>
+                                
+                            </div>
+                        </v-col>
+                        
                 </v-row>
     </v-container>
 </template>
@@ -33,10 +35,22 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .border-styles {
-        border: 1px solid #5fadbe;
-        height: 40vh;
+    .home-hero {
+        // background-color: rgb(188, 187, 187);
+        background-color: white;
         
     }
+    .hero-animation-div {
+        text-align: left;
+        margin: auto;
+        *h1 {
+        color: #383838;
+        font-size: 5em;
+    }
+    }
+    
+    
+    
+    
 </style>
 

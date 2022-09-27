@@ -11,6 +11,7 @@
             <v-col>
                 <v-list color="#121315">
                     <v-list-item
+                        class="list-item"
                         v-for='(framework, index) in frameworks'
                         :key='index'
                         :framework='framework'
@@ -50,6 +51,9 @@ import { Icon } from '@iconify/vue2';
 </script>
 
 <style lang="scss" scoped>
+.list-item {
+    border: 1px solid #5fadbe;
+}
     h1 {
         color: #5fadbe
     }

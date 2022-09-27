@@ -5,7 +5,13 @@ import { defineStore } from "pinia";
 export const useUserStore = defineStore('user',{
     state : () => {
         return{
-            
+            navLinks: [
+                { url: '/', name:"HOME"},
+                { url: '/about', name: "ABOUT"},
+                { url: '/skills', name: "SKILLS"},
+                { url: '/projects', name: "PROJECTS"},
+                { url: '/contact', name: "CONTACT"}
+                ],
         }   
         
     },

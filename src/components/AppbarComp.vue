@@ -2,9 +2,9 @@
 <div class="appbar">
     <v-app-bar
             
-            
+            app
             fixed
-            color="#121315"
+            color="white"
             elevate-on-scroll
             dense
             >
@@ -21,17 +21,17 @@
                     v-for="(link, index) in navLinks"
                     :key="index"
                     
-                    style="color:#5fadbe" @click="scrollsTo(`${link.url}`)">{{link.name}}
+                    style="color:#5fadbe" :to="link.url">{{link.name}}
                 </v-tab>
             </v-tabs>
             <v-btn
                 @click="drawer = !drawer"
-                style="background-color:#121315"
+                style="background-color:white"
                 max-width="50"
                 elevation="0"
-                
+                class="hidden-md-and-up"
                 >
-                <span class="material-symbols-outlined hidden-md-and-up">menu</span>
+                <span class="material-symbols-outlined">menu</span>
                 
             </v-btn>
     </v-app-bar>
@@ -44,9 +44,11 @@
                 v-for="(link, index) in navLinks"
                 :key="index"
                 >
-                <v-list-item-content
-                    @click="scrollsTo()">
-                        <v-list-item-title>{{ link.name }}</v-list-item-title>
+                <v-list-item-content>
+                        <v-list-item-title>
+                            <v-tab :to="link.url">{{ link.name }}</v-tab>
+
+                            </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -57,33 +59,25 @@
 
 <script>
 import { useUserStore } from '@/store';
-import {mapActions} from 'pinia';
+import { mapState } from 'pinia';
 export default {
     name: 'AppbarComp',
     data: () => ({
         drawer: false,
-        navLinks: [
-        { url: '#hero', name:"HOME"},
-        { url: '#about', name: "ABOUT"},
-        { url: '#projects', name: "PROJECTS"},
-        { url: '#contact', name: "CONTACT"}
-        ],
+        
     }),
     methods: {
-        ...mapActions(useUserStore, ['scrollsTo'])
+        // ...mapActions(useUserStore, ['scrollsTo'])
     },
     computed: {
-        
+        ...mapState(useUserStore, ['navLinks'])
     }
     
 };
 </script>
 
 <style lang="scss">
-.appbar {
-    height: 10vh;
 
-}
 h1 {
     color: #5fadbe;
 }

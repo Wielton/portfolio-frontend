@@ -1,89 +1,48 @@
 <template>
 <!-- <v-img :src="require('../src/assets/verticaljspic.jpg')"> -->
-  <v-app id="app" class="app-container">
-    <AppbarComp app/>
-    <HeroComp id="top-section"/>
-    <!-- <PokemonComp /> -->
-          <v-main
-            class="app-main"
-            app
-            align="center">
-              <v-container fluid>
-                
-              <v-divider color="#5fadbe"></v-divider>
-                <AboutComp />
-              <v-divider color="#5fadbe"></v-divider>
-                <ProjectsComp />
-                  <v-divider color="#5fadbe"></v-divider>
-                  
-                  
-                    <!-- <v-row
-                      justify="center">
-                    
-                    </v-row>
-                    <v-row
-                      justify="end">
-                    
-                  </v-row> -->
-                <v-divider color="#5fadbe"></v-divider>
-                  <h1 ref="contact" style="color:#5fadbe">CONTACT</h1>
-                  <v-row
-                    id="contact-section"
-                    align="center"
-                    justify="center">
-                      <v-col cols="12" sm="6" md="4" lg="4">
-                          <ContactComp />
-                      </v-col>
-                      <v-col
-                          xs="12" sm="6" md="4" lg="4">
-                          <h2 style="color:#5fadbe">Grant Wielgosz</h2>
-                          <v-divider></v-divider>
-                          <h4 style="color:#5fadbe">Edmonton, Alberta</h4>
-                          <v-divider></v-divider>
-                          <h4 style="color:#5fadbe">grantWielgosz@gmail.com</h4>
-                          <v-divider></v-divider>
-                          <!-- <p style="color:#5fadbe">Please contact me for more info!</p> -->
-                          <v-avatar
-                            v-for="link, index in socialIcons"
-                            :key="index"
-                            :link="link"
-                            >
-                            <a :href="link.link">
-                            
-                              
-                            <Icon
-                              style="color:#5fadbe"
-                              width="50"
-                              height="50"
-                              :icon="link.logo">
-                            </Icon>
-                            </a>
-                          </v-avatar>
-                        </v-col>
-                    </v-row>
-                </v-container>
-            </v-main>
+  <v-app app class="app-container">
+    <AppbarComp />
+    
+      <v-main
+        app
+        align="center"
+        >
+        
+        <v-container fluid>
+            <HeroComp ref="hero"/>
             
+            <v-divider color="#5fadbe"></v-divider>
+              
+            <AboutComp ref="about"/>
+              
+            <v-divider color="#5fadbe"></v-divider>
+              
+            <ProjectsComp ref="projects"/>
+              
+            <v-divider color="#5fadbe"></v-divider>
+
+            <ContactComp ref="contacts"/>
+
+            <v-divider color="#5fadbe"></v-divider>
+          </v-container>
+          
+      </v-main>
     
   </v-app>
-<!-- </v-img> -->
 </template>
 
 <script>
-import { Icon } from '@iconify/vue2';
 import AppbarComp from './components/AppbarComp.vue';
 import HeroComp from './components/HeroComp.vue';
-
-import ContactComp from './components/ContactComp.vue';
-import { useUserStore } from './store';
-import {mapActions} from 'pinia';
 import AboutComp from './components/AboutComp.vue';
 import ProjectsComp from './components/ProjectsComp.vue';
+import ContactComp from './components/ContactComp.vue';
+
 // import PokemonComp from './components/pokemon/PokemonComp.vue';
 
 
 export default {
-  components: { AppbarComp, HeroComp, ContactComp, Icon, AboutComp, ProjectsComp },
+  components: { AppbarComp, HeroComp, AboutComp, ProjectsComp, ContactComp},
   name: 'App',
   props: {
     
@@ -98,36 +57,31 @@ export default {
         'space-between',
       ],
       
-      socialIcons: [
-        {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'mdi:linkedin'},
-        {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'mdi:github'},
-        ],
+      
       
   }),
   methods: {
-    ...mapActions(useUserStore, ['scrollsTo'])
-  },
-  computed: {
     
-  }
+  },
   
 };
 </script>
 <style lang="css" scoped>
 #app {
-  background-color: 
-#121315;
+  width: 100vw;
+  background-color: white;
+  scroll-behavior: smooth;
+  
 }
+.app-main {
+  height: 100%;
+}
+/* .app-container {
+  height: 100vh;
+} */
 
 
-  .v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: .9;
-  position: absolute;
-  width: 100%;
-}
+  
 /* .hero-main {
         width: 100%;
         height: 50vh;

@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container fluid>
         <v-row>
             <v-col>
                 <h1>Languages</h1>
@@ -10,6 +10,7 @@
             <v-col>
                 <v-list class='list-styling' color="#121315">
                     <v-list-item
+                        class="list-item"
                         v-for='(language, index) in programmingIcons'
                         :key='index'
                         :language='language'
@@ -48,14 +49,14 @@
 </script>
 
 <style lang="scss" scoped>
-.list-styling {
-    border: 1px solid #5fadbe;
 
+.list-item {
+    border: 1px solid #5fadbe;
 }
     h1 {
-        color: #5fadbe
+        color: #5fadbe;
     }
     .language-text {
-        color: #5fadbe
+        color: #5fadbe;
     }
 </style>

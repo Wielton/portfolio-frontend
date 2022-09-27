@@ -19,10 +19,10 @@
                                 :aspect-ratio="16/9"
                                 :src="`${project.img}`">
                                 <v-expand-transition>
-                                <div
+                                <v-content
                                         v-if="hover"
                                         class="d-flex transition-slow-in-slow-out v-card--reveal text-h2"
-                                        style="height: 100%; background-image: linear-gradient(white, #5fadbe); opacity: 0.9; font-color: #383838">
+                                        style="height: 100%; width: 100%; background-image: linear-gradient(white, #5fadbe); opacity: 0.9; font-color: #383838">
                                         <v-card-subtitle>{{project.name}}</v-card-subtitle>
                                         
                                         <v-card-actions>
@@ -31,7 +31,7 @@
                                             <v-card-text>Backend code:</v-card-text>
                                             <a :href='project.gitLinkBE' target="/blank"><v-btn class="btn">VIEW</v-btn></a>
                                         </v-card-actions>
-                                    </div>
+                                    </v-content>
                             </v-expand-transition>
                         </v-img>
                     </v-card>
@@ -56,6 +56,14 @@
 </script>
 
 <style lang="scss" scoped>
+    .v-card--reveal {
+        align-items: center;
+        bottom: 0;
+        justify-content: center;
+        opacity: .9;
+        position: absolute;
+        margin: auto;
+    }
     *a {
         text-decoration: none;
     }
