@@ -1,23 +1,23 @@
 <template>
     <v-container app fluid class="home-hero">
                 <v-row
+                    cols="12"
                     class="border-styles"
                     align="center"
                     justify="center">
                         <v-col 
-                        cols="12"
-                        sm="4"
-                        md="6">
-                            <div class="hero-animation-div">
-                                <div class="hero-full-text"><h1 class="linear">FULL</h1></div>
-                                <div class="hero-stack-text"><h1 class="linear">STACK</h1></div>
-                                <div class="hero-development-text"><h1 class="linear">DEVELOPMENT</h1></div>
-                            </div>
+                            sm="12"
+                            md="4"
+                        >
+                            <v-content md4 class="hero-animation-div">
+                                <h1 class="linear">FULL</h1>
+                                <h1 class="linear">STACK</h1>
+                            </v-content>
                         </v-col>
                         <v-col>
-                            <div>
+                            <v-content>
                                 
-                            </div>
+                            </v-content>
                         </v-col>
                         
                 </v-row>

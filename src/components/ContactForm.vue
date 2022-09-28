@@ -2,7 +2,7 @@
     <div>
     <v-card class="contact-form" elevation="0" cols="12">
         <v-text-field
-            background-color='white'
+            color='#5fadbe'
             v-model="firstName"
             type="text"
             outlined
@@ -10,7 +10,7 @@
             >
         </v-text-field>
         <v-text-field
-            background-color='white'
+            color='#5fadbe'
             v-model="companyName"
             type="text"
             outlined
@@ -18,7 +18,7 @@
             >
         </v-text-field>
         <v-text-field
-            background-color='white'
+            color='#5fadbe'
             v-model="email"
             type="email"
             outlined
@@ -26,7 +26,7 @@
             >
         </v-text-field>
         <v-textarea
-            background-color='white'
+            color='#5fadbe'
             v-model="comment"
             type="comment"
             outlined
@@ -66,6 +66,6 @@ export default {
 .contact-form {
     align-items: center;
     color: #5fadbe;
-    background-color: #121315;
+    background-color: white;
 }
 </style>

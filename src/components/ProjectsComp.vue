@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid>
+    <v-container fluid class="projects-main">
         <h1 ref="projects" style="color:#5fadbe">PROJECTS</h1>
             <v-row
                 id="projects-section"
@@ -27,9 +27,9 @@
                                         
                                         <v-card-actions>
                                             <v-card-text>Frontend code:</v-card-text>
-                                            <a :href='project.gitLinkFE' target="/blank"><v-btn class="btn">VIEW</v-btn></a>
+                                            <a :if="isFeLink" :href='project.gitLinkFE' target="_blank"><v-btn class="btn">VIEW</v-btn></a>
                                             <v-card-text>Backend code:</v-card-text>
-                                            <a :href='project.gitLinkBE' target="/blank"><v-btn class="btn">VIEW</v-btn></a>
+                                            <a :if="isBeLink" :href='project.gitLinkBE' target="_blank"><v-btn class="btn">VIEW</v-btn></a>
                                         </v-card-actions>
                                     </v-content>
                             </v-expand-transition>
@@ -44,10 +44,12 @@
 <script>
     export default {
         name: "ProjectsComponent",
+        isFeLink: false,
+        isBeLink: false,
         data: () => ({
             viewDetails: false,
             projects: [
-                // {name: 'Pokemon Battle', img: require('../src/assets/charBattle.png'), skill: "fa-brands fa-html5", gitLink: ''},
+                {name: 'Pokemon Battle', img: require('../assets/charBattle.png'), gitLinkFE: 'https://github.com/Wielton/Week10Hackathon'},
                 {name: 'reDraft Fantasy Football', img: require('../assets/redraft-home.png'), gitLinkFE: 'https://github.com/Wielton/redraft-frontend', gitLinkBE: 'https://github.com/Wielton/redraft'},
                 {name: 'Foodie: A Skip Clone', img: require('../assets/foodie.png'), gitLinkFE: 'https://github.com/Wielton/project-foodie', gitLinkBE: 'https://github.com/Wielton/foodie-backend'}
             ],
@@ -56,6 +58,9 @@
 </script>
 
 <style lang="scss" scoped>
+    .projects-main {
+        margin: auto;
+    }
     .v-card--reveal {
         align-items: center;
         bottom: 0;

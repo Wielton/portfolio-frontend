@@ -7,12 +7,9 @@
             align="center">
             <v-col>
                 <p class="about-content-one">
-                    Welcome to my site! I'm a Full Stack Developer from Canada, creating interactive and responsive designs
-                    <br>
-                    On both <span>FRONTEND</span> and <span>BACKEND</span>
                     
-                    </p>  
-
+                    
+                </p>  
             </v-col> 
         </v-row>
         
@@ -29,7 +26,7 @@
     
     .about-content-one {
         color:#5fadbe;
-        padding: 5%;
+        margin: auto;
         align-items: center;
     }
     .about-content-two {
