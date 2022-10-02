@@ -5,11 +5,11 @@
                 <h1>Frameworks</h1>
             </v-col>
         </v-row>
-            <v-divider color="#5fadbe"></v-divider>
+            <v-divider color="white"></v-divider>
 
         <v-row>
             <v-col>
-                <v-list color="#121315">
+                <v-list color="black">
                     <v-list-item
                         class="list-item"
                         v-for='(framework, index) in frameworks'
@@ -42,9 +42,9 @@ import { Icon } from '@iconify/vue2';
         data: () => ({
             
             frameworks: [
-                {name: 'Vue', logo: 'mdi:vuejs'},
-                {name: 'React', logo: 'mdi:react'},
-                {name: 'Flask', logo: ''}
+                {name: 'Vuetify', logo: 'mdi:vuetify'},
+                {name: 'TailwindCSS', logo: 'mdi:tailwind'},
+                {name: 'Bootstrap', logo: 'mdi:bootstrap'}
             ],
         })
     }
@@ -52,7 +52,7 @@ import { Icon } from '@iconify/vue2';
 
 <style lang="scss" scoped>
 .list-item {
-    border: 1px solid #5fadbe;
+    
 }
     h1 {
         color: #5fadbe

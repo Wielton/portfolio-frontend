@@ -2,7 +2,7 @@
     <v-container>
         <v-row>
             <v-col>
-                <h1>Deployment</h1>
+                <h1>DevOps</h1>
             </v-col>
         </v-row>
             <v-divider color="#5fadbe"></v-divider>
@@ -44,8 +44,7 @@ import { Icon } from '@iconify/vue2';
         name: 'LanguagesComp',
         data: () => ({
             deploymentTools: [
-                {name: 'GoogleCloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg'},
-                {name: 'Apache', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg'},
+                {name: 'GoogleCloud', logo: 'mdi:google-cloud'},
                 {name: 'Debian', logo: 'mdi:debian'},
                 {name: 'Linux', logo: 'mdi:linux'},
                 {name: 'ssh', logo: 'mdi:ssh'}

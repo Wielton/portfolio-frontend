@@ -1,27 +1,9 @@
 <template>
-    <v-container app fluid class="home-hero">
-                <v-row
-                    cols="12"
-                    class="border-styles"
-                    align="center"
-                    justify="center">
-                        <v-col 
-                            sm="12"
-                            md="4"
-                        >
-                            <v-content md4 class="hero-animation-div">
-                                <h1 class="linear">FULL</h1>
-                                <h1 class="linear">STACK</h1>
-                            </v-content>
-                        </v-col>
-                        <v-col>
-                            <v-content>
-                                
-                            </v-content>
-                        </v-col>
-                        
-                </v-row>
-    </v-container>
+        <div class="outer" >
+            <div class="inner1">
+                
+            </div>
+        </div>
 </template>
 
 <script>
@@ -35,18 +17,18 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .home-hero {
-        // background-color: rgb(188, 187, 187);
-        background-color: white;
+    .outer {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(30deg, rgb(97, 53, 179), black);
+        z-index: -1;
         
     }
-    .hero-animation-div {
-        text-align: left;
-        margin: auto;
-        *h1 {
-        color: #383838;
-        font-size: 5em;
-    }
+    .inner1 {
+        background-image: linear-gradient(65deg, rgb(48, 17, 115), black);
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
     }
     
     

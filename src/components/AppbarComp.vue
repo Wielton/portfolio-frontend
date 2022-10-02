@@ -1,12 +1,14 @@
 <template>
-<div class="appbar">
+<div
+    
+    >
     <v-app-bar
-            
             app
             fixed
-            color="white"
+            color="black"
+            hide-on-scroll
             elevate-on-scroll
-            dense
+            class="Navbar"
             >
             <h1 class="hidden-md-and-up">GW</h1>
             <h1 class="hidden-sm-and-down">Grant Wielgosz</h1>
@@ -14,19 +16,19 @@
             
             <v-tabs
                 right
-                color="#5fadbe"
+                color="black"
                 class="hidden-sm-and-down tabs-style"
                 >
                 <v-tab 
                     v-for="(link, index) in navLinks"
                     :key="index"
                     
-                    style="color:#5fadbe" :to="link.url">{{link.name}}
+                    style="color: black" :to="link.url">{{link.name}}
                 </v-tab>
             </v-tabs>
             <v-btn
                 @click="drawer = !drawer"
-                style="background-color:white"
+                style="background-color: black"
                 max-width="50"
                 elevation="0"
                 class="hidden-md-and-up"
@@ -47,8 +49,7 @@
                 <v-list-item-content>
                         <v-list-item-title>
                             <v-tab :to="link.url">{{ link.name }}</v-tab>
-
-                            </v-list-item-title>
+                        </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -77,9 +78,11 @@ export default {
 </script>
 
 <style lang="scss">
-
+.Navbar {
+    background-image: linear-gradient(to top, white, black)
+}
 h1 {
-    color: #5fadbe;
+    color: black;
 }
 .tabs-style {
     max-width: 70%;

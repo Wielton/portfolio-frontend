@@ -7,18 +7,13 @@
         
             <v-spacer></v-spacer>
         <v-row id="skills-section" align="center">
-        <v-col xs="12" sm="4" md="4" lg="4">
-            <v-spacer></v-spacer>
+        <v-col cols="12" xs="12" sm="12" md="6" lg="6">
             <LanguagesComp />
         </v-col>
-        <v-col xs="12" sm="4" md="4" lg="4">
-            <v-spacer></v-spacer>
+        <v-col cols="12" xs="12" sm="12" md="6" lg="6">
             <FrameworksComp />
         </v-col>
-        <v-col xs="12" sm="4" md="4" lg="4">
-            <v-spacer></v-spacer>
-            <DeploymentComp />
-        </v-col>
+        
         </v-row>
     </container>
 </template>
@@ -26,18 +21,16 @@
 <script>
 import LanguagesComp from './LanguagesComp.vue';
 import FrameworksComp from './FrameworksComp.vue';
-import DeploymentComp from './DeploymentComp.vue';
 export default {
     name: 'SkillsComponent',
     components: {
-        LanguagesComp, FrameworksComp, DeploymentComp
+        LanguagesComp, FrameworksComp
     }
 };
 </script>
 
 <style lang="scss" scoped>
     .skills-container {
-        height: 100%;
-        width: 100%;
+        
     }
 </style>

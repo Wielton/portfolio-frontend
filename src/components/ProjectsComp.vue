@@ -27,9 +27,9 @@
                                         
                                         <v-card-actions>
                                             <v-card-text>Frontend code:</v-card-text>
-                                            <a :if="isFeLink" :href='project.gitLinkFE' target="_blank"><v-btn class="btn">VIEW</v-btn></a>
+                                            <a v-if="isFeLink" :href='project.gitLinkFE' target="_blank"><v-btn class="btn">VIEW</v-btn></a>
                                             <v-card-text>Backend code:</v-card-text>
-                                            <a :if="isBeLink" :href='project.gitLinkBE' target="_blank"><v-btn class="btn">VIEW</v-btn></a>
+                                            <a v-if="isBeLink" :href='project.gitLinkBE' target="_blank"><v-btn class="btn">VIEW</v-btn></a>
                                         </v-card-actions>
                                     </v-content>
                             </v-expand-transition>

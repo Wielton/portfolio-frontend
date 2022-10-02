@@ -5,10 +5,10 @@
                 <h1>Languages</h1>
             </v-col>
         </v-row>
-            <v-divider color="#5fadbe"></v-divider>
+            <v-divider color="white"></v-divider>
         <v-row>
             <v-col>
-                <v-list class='list-styling' color="#121315">
+                <v-list class='list-styling' color="black">
                     <v-list-item
                         class="list-item"
                         v-for='(language, index) in programmingIcons'
@@ -38,11 +38,12 @@
         components: { Icon },
         data: () => ({
             programmingIcons: [
-                    {name: 'HTML5', logo: 'mdi:language-html5'},
-                    {name: 'CSS3', logo: 'mdi:language-css3'},
-                    {name: 'JavaScript', logo: 'mdi:language-javascript'},
+                    
+                    {name: 'Vue.js', logo: 'mdi:vuejs'},
+                    {name: 'React', logo: 'mdi:react'},
                     {name: 'Python', logo: 'mdi:language-python'},
-                    {name: 'mySQL', logo: 'mdi:database'}
+                    {name: 'mySQL', logo: 'mdi:database'},
+                    {name: 'Node.js', logo: 'mdi:nodejs'},
                     ],
         })
     }
@@ -51,7 +52,7 @@
 <style lang="scss" scoped>
 
 .list-item {
-    border: 1px solid #5fadbe;
+    border: none;
 }
     h1 {
         color: #5fadbe;

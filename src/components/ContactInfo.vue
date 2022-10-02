@@ -1,32 +1,47 @@
 <template>
-    <div app>
-        <h2 style="color:#5fadbe">Grant Wielgosz</h2>
-        
-        <v-divider></v-divider>
-        
-        <h4 style="color:#5fadbe">Edmonton, Alberta</h4>
-        
-        <v-divider></v-divider>
-        
-        <h4 style="color:#5fadbe">grantWielgosz@gmail.com</h4>
-        
-        <v-divider></v-divider>
-        <!-- <p style="color:#5fadbe">Please contact me for more info!</p> -->
-        <v-avatar
-            v-for="link, index in socialIcons"
-            :key="index"
-            :link="link"
-            >
-            <a :href="link.link">
-                <Icon
-                    style="color:#5fadbe"
-                    width="50"
-                    height="50"
-                    :icon="link.logo">
-                </Icon>
-            </a>
-        </v-avatar>
-    </div>
+    <v-container app fluid class="footer-container">
+        <v-row>
+            <v-col xs="12" sm="6" md="6" lg="6">
+                <div class="footer-info">
+                <h2>Grant Wielgosz</h2>
+                <h4>Edmonton, Alberta</h4>
+                <h4>grantWielgosz@gmail.com</h4>
+                </div>
+            </v-col>
+            <v-col xs="12" sm="6" md="6" lg="6">
+                <div class="footer-links">
+                <v-avatar
+                    v-for="link, index in socialIcons"
+                    :key="index"
+                    :link="link"
+                    >
+                    <a :href="link.link">
+                        <Icon
+                            style="color:black"
+                            width="50"
+                            height="50"
+                            :icon="link.logo">
+                        </Icon>
+                    </a>
+                </v-avatar>
+                </div>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col col="12">
+                <div class="footer-copyright">
+                <p >
+                    <span>
+                        <v-icon style="color:white">
+                            mdi-copyright
+                        </v-icon>
+                    </span>
+                    2022 WieltonWebDev 
+                </p>
+                </div>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 <script>
@@ -38,11 +53,26 @@ import { Icon } from '@iconify/vue2';
             socialIcons: [
                 {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'mdi:linkedin'},
                 {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'mdi:github'},
+                
             ],
         })
     }
 </script>
 
 <style lang="scss" scoped>
+    *div {
+        text-align: center;
+    }
+    *h2 h4 {
+        color: black;
+    }
+    p {
+        color: white;
+    }
+    .footer-info {
+        
+    }
+    .footer-links {
 
+    }
 </style>
