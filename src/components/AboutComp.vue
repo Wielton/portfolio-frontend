@@ -1,19 +1,27 @@
 <template>
-    <div class="about">
-        <h1 style="color:#5fadbe">ABOUT</h1>
+    <v-container fluid>
         <v-row
-            id="about-section"
-            ref="about"
-            align="center">
+            >
             <v-col>
-                <p class="about-content-one">
-                    
-                    
-                </p>  
-            </v-col> 
+                <h1 class="seo-h1">
+                    SEO
+                </h1>  
+            </v-col>
+            <v-col>
+                <p class="seo-p">Stand out in Google searches with effective <span class="p-span">Search Engine Optimization</span></p>
+            </v-col>
         </v-row>
-        
-    </div>
+        <v-row>
+            <v-col>
+                <p class="secure-p">Safe, trusted sites keep information<span class="p-span">Secure</span></p>
+            </v-col>
+            <v-col>
+                <h1 class="secure-h1">
+                    Secure
+                </h1>  
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 <script>
@@ -23,14 +31,20 @@
 </script>
 
 <style lang="scss" scoped>
-    
-    .about-content-one {
-        color:#5fadbe;
-        margin: auto;
-        align-items: center;
+    // .about {
+    //     background-image: linear-gradient(to top, black, white);
+    // }
+    .seo-h1 {
+        font-size: 2.5em;
+        color: grey;
     }
-    .about-content-two {
-        color:#5fadbe;
-        align-items: center;
+    .secure-h1 {
+        font-size: 2.5em;
+        color: grey;
+    }
+    .p-span {
+        font-size:1.5em;
+        font-weight:bold;
+        color: rgba(226, 86, 22, 0.8)
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <v-container fluid class="projects-main">
-        <h1 ref="projects" style="color:#5fadbe">PROJECTS</h1>
+        <h1 ref="projects" style="color:black">PROJECTS</h1>
             <v-row
                 id="projects-section"
                 align="center">
@@ -11,7 +11,7 @@
                     cols="12" sm="6" md="4" lg="4">
                     <v-hover v-slot="{ hover }">
                         <v-card
-                            color="grey lighten-4"
+                            
                             min-width="100"
                             max-width="400"
                             class="mx-auto projects-trans">

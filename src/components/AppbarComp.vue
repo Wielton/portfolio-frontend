@@ -5,7 +5,6 @@
     <v-app-bar
             app
             fixed
-            color="black"
             hide-on-scroll
             elevate-on-scroll
             class="Navbar"
@@ -28,10 +27,9 @@
             </v-tabs>
             <v-btn
                 @click="drawer = !drawer"
-                style="background-color: black"
                 max-width="50"
                 elevation="0"
-                class="hidden-md-and-up"
+                class="hidden-md-and-up menu-btn"
                 >
                 <span class="material-symbols-outlined">menu</span>
                 
@@ -86,6 +84,9 @@ h1 {
 }
 .tabs-style {
     max-width: 70%;
+}
+.menu-btn {
+    background-color: white;
 }
 .material-symbols-outlined {
     color: #5fadbe;

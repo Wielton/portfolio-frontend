@@ -2,14 +2,13 @@
     <v-container>
         <v-row>
             <v-col>
-                <h1>Frameworks</h1>
+                <h1 class="text">Frameworks</h1>
             </v-col>
         </v-row>
-            <v-divider color="white"></v-divider>
 
         <v-row>
             <v-col>
-                <v-list color="black">
+                <v-list color="white">
                     <v-list-item
                         class="list-item"
                         v-for='(framework, index) in frameworks'
@@ -20,7 +19,7 @@
                             <Icon
                                 :src='framework.logo'
                                 :icon='framework.logo'
-                                color="#5fadbe"
+                                color="black"
                                 >
                                 </Icon>
                         </v-list-item-avatar>
@@ -54,10 +53,7 @@ import { Icon } from '@iconify/vue2';
 .list-item {
     
 }
-    h1 {
-        color: #5fadbe
-    }
     .language-text {
-        color: #5fadbe
+        color: black;
     }
 </style>

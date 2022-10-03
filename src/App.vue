@@ -4,7 +4,7 @@
     <v-app-bar
             app
             fixed
-            color="black"
+            color="white"
             hide-on-scroll
             elevate-on-scroll
             class="Navbar"
@@ -17,6 +17,7 @@
                 right
                 color="black"
                 class="hidden-sm-and-down tabs-style"
+                hide-slider
                 >
                 <v-tab 
                     v-for="(link, index) in navLinks"
@@ -27,7 +28,7 @@
             </v-tabs>
             <v-btn
                 @click="drawer = !drawer"
-                style="background-color: black"
+                style="background-color: transparent"
                 max-width="50"
                 elevation="0"
                 class="hidden-md-and-up"
@@ -58,26 +59,38 @@
         app
         align="center"
         >
-          <v-content ref="hero" app class="hero">
-            <HeroComp />
-          </v-content>
-          <v-content ref="about" app class="about">              
+        <v-container fluid>
+
+          <v-row ref="hero" app class="hero">
+            <v-col>
+              <HeroComp />
+            </v-col>
+          </v-row>
+          <v-row ref="about" app class="about">       
+            <v-col>
             <AboutComp />
-          </v-content>
-          <v-content ref="skills" app class="skills">    
+            </v-col>
+          </v-row>
+          <v-row ref="skills" app class="skills">   
+            <v-col>
             <SkillsComp />
-          </v-content>
-          <v-content ref="projects" app class="projects">    
+            </v-col>
+          </v-row>
+          <v-row ref="projects" app class="projects">  
+            <v-col>  
             <ProjectsComp />
-          </v-content>
-          <v-content ref="contacts" app class="contact">
+            </v-col>
+          </v-row>
+          <v-row ref="contacts" app class="contact">
+            <v-col>
             <ContactComp />
-          </v-content>
+            </v-col>
+          </v-row>
           
-          
+        </v-container>
       </v-main>
       <v-footer class="footer">
-        <FooterComp />
+        <ContactInfo />
       </v-footer>
   </v-app>
 </template>
@@ -87,13 +100,13 @@ import HeroComp from './components/HeroComp.vue';
 import AboutComp from './components/AboutComp.vue';
 import ProjectsComp from './components/ProjectsComp.vue';
 import ContactComp from './components/ContactComp.vue';
-import FooterComp from './components/FooterComp.vue';
 import SkillsComp from './components/SkillsComp.vue';
+import ContactInfo from './components/ContactInfo.vue';
 // import PokemonComp from './components/pokemon/PokemonComp.vue';
 
 
 export default {
-  components: { HeroComp, AboutComp, ProjectsComp, ContactComp, FooterComp, SkillsComp},
+  components: { HeroComp, AboutComp, ProjectsComp, ContactComp, SkillsComp, ContactInfo},
   name: 'App',
   props: {
     
@@ -133,7 +146,7 @@ export default {
 #app {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: white;
   scroll-behavior: smooth;
   overflow: hidden;
   
@@ -147,9 +160,9 @@ export default {
   
   font-size: 1em;
 }
-.Navbar {
-    background-image: linear-gradient(to top, white, black)
-}
+// .Navbar {
+//     background-image: linear-gradient(to top, white, black)
+// }
 h1 {
     color: black;
 }
@@ -157,29 +170,12 @@ h1 {
     max-width: 70%;
 }
 .material-symbols-outlined {
-    color: #5fadbe;
+    color: black;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
     'opsz' 48
 }
-.hero {
-  height: 10%;
-}
-.about {
-  height: 10%;
-}
-.skills {
-  height: 10%;
-}
-.projects {
-  height: 10%;
-}
-.contacts {
-  height: 10%;
-}
-.footer {
-  height: 10%;
-}
+
 </style>

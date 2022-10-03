@@ -41,7 +41,7 @@
         <v-card-actions>
             <v-btn
                 
-                color="#5fadbe"
+                color="transparent"
                 @click="postComment(firstName, companyName, email, comment)"
                 >Add Review</v-btn>
         </v-card-actions>
@@ -70,7 +70,7 @@ export default {
 <style lang="scss" scoped>
 .contact-form {
     align-items: center;
-    color: #5fadbe;
-    background-color: black;
+    color: black;
+    background-color: white;
 }
 </style>

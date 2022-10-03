@@ -1,14 +1,14 @@
 <template>
     <v-container app fluid class="footer-container">
         <v-row>
-            <v-col xs="12" sm="6" md="6" lg="6">
+            <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                 <div class="footer-info">
                 <h2>Grant Wielgosz</h2>
                 <h4>Edmonton, Alberta</h4>
                 <h4>grantWielgosz@gmail.com</h4>
                 </div>
             </v-col>
-            <v-col xs="12" sm="6" md="6" lg="6">
+            <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                 <div class="footer-links">
                 <v-avatar
                     v-for="link, index in socialIcons"
@@ -28,7 +28,7 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-col col="12">
+            <v-col cols="12">
                 <div class="footer-copyright">
                 <p >
                     <span>
@@ -69,8 +69,8 @@ import { Icon } from '@iconify/vue2';
     p {
         color: white;
     }
-    .footer-info {
-        
+    .footer-container {
+        width: 100%;
     }
     .footer-links {
 

@@ -1,11 +1,12 @@
 <template>
-    <container app fluid class="skills-container">
-        <div>
-            <h1 ref="skills" style="color: #121315">SKILLS</h1>
-        </div>
-        <v-divider color="#5fadbe"></v-divider>
+    <div class="skills-container">
+    <container app fluid>
+        <v-row>
+            <v-col cols="12">
+                <h1 ref="skills" style="color: black">SKILLS</h1>
+            </v-col>
+        </v-row>
         
-            <v-spacer></v-spacer>
         <v-row id="skills-section" align="center">
         <v-col cols="12" xs="12" sm="12" md="6" lg="6">
             <LanguagesComp />
@@ -16,6 +17,7 @@
         
         </v-row>
     </container>
+    </div>
 </template>
 
 <script>
@@ -30,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .skills-container {
-        
-    }
+    // .skills-container {
+    //     background-image: linear-gradient(to top, black, white);
+    // }
 </style>

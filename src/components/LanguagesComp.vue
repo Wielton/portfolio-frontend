@@ -2,13 +2,12 @@
     <v-container fluid>
         <v-row>
             <v-col>
-                <h1>Languages</h1>
+                <h1 class="language-text">Languages</h1>
             </v-col>
         </v-row>
-            <v-divider color="white"></v-divider>
         <v-row>
             <v-col>
-                <v-list class='list-styling' color="black">
+                <v-list class='list-styling' color="white">
                     <v-list-item
                         class="list-item"
                         v-for='(language, index) in programmingIcons'
@@ -16,7 +15,7 @@
                         :language='language'
                         >
                         <v-list-item-avatar>
-                            <Icon :src='language.logo' :icon='language.logo' color="#5fadbe"
+                            <Icon :src='language.logo' :icon='language.logo' color="black"
                                 >
                                 </Icon>
                         </v-list-item-avatar>
@@ -54,10 +53,8 @@
 .list-item {
     border: none;
 }
-    h1 {
-        color: #5fadbe;
-    }
+    
     .language-text {
-        color: #5fadbe;
+        color: black;
     }
 </style>
