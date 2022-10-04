@@ -23,7 +23,9 @@
                             :icon="link.logo">
                         </Icon>
                     </a>
+                    <v-spacer></v-spacer>
                 </v-avatar>
+                
                 </div>
             </v-col>
         </v-row>
@@ -51,8 +53,8 @@ import { Icon } from '@iconify/vue2';
         components: { Icon },
         data: () => ({
             socialIcons: [
-                {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'mdi:linkedin', brandColor: 'lightblue'},
-                {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'mdi:github', brandColor: 'orange'},
+                {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'mdi:linkedin', brandColor: '#61DBFB'},
+                {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'mdi:github', brandColor: '#F1502F'},
                 
             ],
         })

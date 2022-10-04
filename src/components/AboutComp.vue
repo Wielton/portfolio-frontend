@@ -1,13 +1,15 @@
 <template>
     <v-container fluid>
         <v-row
+            align="center"
+            
             >
-            <v-col>
+            <v-col cols="12" sm="6" xl="6">
                 <h1 class="seo-h1">
                     SEO
                 </h1>  
             </v-col>
-            <v-col>
+            <v-col cols="12" sm="6" xl="6">
                 <p class="description-p">
                     Stand out in Google searches with effective
                 <span class="p-span">Search Engine Optimization</span>
@@ -15,13 +17,13 @@
             </v-col>
         </v-row>
         <v-divider />
-        <v-row>
-            <v-col>
+        <v-row align="center">
+            <v-col cols="12" sm="6" xl="6">
                 <p class="description-p">Safe, trusted sites keep information 
                     <span class="p-span">Secure</span>
                     </p>
             </v-col>
-            <v-col>
+            <v-col cols="12" sm="6" xl="6">
                 <h1 class="secure-h1">
                     Secure
                 </h1>  
@@ -41,17 +43,20 @@
     //     background-image: linear-gradient(to top, black, white);
     // }
     h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         color: grey;
     }
     .description-p {
+        margin: 3em;
         font-size:1.3em;
         font-weight:bold;
         color: rgb(101, 101, 101);
     }
     .p-span {
+        // margin: auto;
+
         font-size:1.7em;
         font-weight:bold;
-        color: rgba(226, 86, 22, 0.8)
+        color: rgba(226, 86, 22, 0.8);
     }
 </style>

@@ -1,43 +1,34 @@
 <template>
-    <v-container>
-        <v-row>
-            <v-col>
-                <h1 class="text">Frameworks</h1>
-            </v-col>
-        </v-row>
-
-        <v-row>
-            <v-col>
-                <v-list color="white">
-                    <v-list-item
-                        class="list-item"
-                        v-for='(framework, index) in frameworks'
-                        :key='index'
-                        :framework='framework'
-                        >
-                        <v-list-item-avatar>
-                            <Icon
-                                :src='framework.logo'
-                                :icon='framework.logo'
-                                color="black"
-                                >
-                                </Icon>
-                        </v-list-item-avatar>
-                        <v-list-item-title class='language-text'>
-                            {{framework.name}}
-                        </v-list-item-title>
-                    </v-list-item>
-                </v-list>
-
-            </v-col>
-        </v-row>
-    </v-container>
+    <h3 class="description">Take advantage of industry-leading frameworks providing responsive design from mobile to widescreen sizes.
+                    <br>
+                    Animations and effects add a modern touch, while colour schemes add elegance.
+                <!-- <span><h2>React</h2>
+                    <v-avatar>
+                        <Icon
+                            :src='react.logo'
+                            :icon='react.logo'
+                            :color="react.color"
+                            >
+                            </Icon>
+                    </v-avatar>
+                </span>
+                and <span><h2>Vue</h2>
+                <v-avatar>
+                        <Icon
+                            :src='vue.logo'
+                            :icon='vue.logo'
+                            :color="vue.color"
+                            >
+                            </Icon>
+                    </v-avatar>
+                    </span> -->
+                </h3>
 </template>
 
 <script>
-import { Icon } from '@iconify/vue2';
+// import { Icon } from '@iconify/vue2';
     export default {
-        components: { Icon },
+        // components: { Icon },
         data: () => ({
             
             frameworks: [

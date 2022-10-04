@@ -1,7 +1,5 @@
 <template>
-    <v-container fluid>
-        <v-row>
-            <v-col cols="12">
+    
                 <h3 class="description">Take advantage of industry-leading frameworks providing responsive design from mobile to widescreen sizes.
                     <br>
                     Animations and effects add a modern touch, while colour schemes add elegance.
@@ -26,9 +24,7 @@
                     </v-avatar>
                     </span> -->
                 </h3>
-            </v-col>
-        </v-row>
-    </v-container>
+            
 </template>
 
 <script>

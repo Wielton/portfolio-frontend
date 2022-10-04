@@ -59,34 +59,22 @@
         app
         align="center"
         >
-        <v-container fluid>
-
-          <v-row ref="hero" app class="hero">
-            <v-col>
-              <HeroComp />
-            </v-col>
+        <v-container fluid app>
+          <v-row ref="hero" class="hero" >
+            <HeroComp />
           </v-row>
-          <v-row ref="about" app class="about">       
-            <v-col>
+          <v-row ref="about" class="about">       
             <AboutComp />
-            </v-col>
           </v-row>
-          <v-row ref="skills" app class="skills">   
-            <v-col>
+          <v-row ref="skills" class="skills">   
             <SkillsComp />
-            </v-col>
           </v-row>
-          <v-row ref="projects" app class="projects">  
-            <v-col>  
+          <v-row ref="projects" class="projects">  
             <ProjectsComp />
-            </v-col>
           </v-row>
-          <v-row ref="contacts" app class="contact">
-            <v-col>
+          <v-row ref="contacts" class="contact">
             <ContactComp />
-            </v-col>
           </v-row>
-          
         </v-container>
       </v-main>
       <v-footer class="footer">
@@ -149,6 +137,7 @@ export default {
   background-color: rgb(216, 206, 206);
   scroll-behavior: smooth;
   overflow: hidden;
+  
   // padding: 0;
 }
 .app-container {
@@ -161,7 +150,10 @@ export default {
   font-size: 1em;
 }
 .Navbar {
-    background-image: linear-gradient(to left, rgba(32, 20, 137, 0.8), rgb(207, 187, 187));
+    background-image: linear-gradient(to left, rgba(141, 0, 33, 0.8), rgb(207, 187, 187));
+}
+.footer {
+    background-color: rgb(216, 206, 206);
 }
 h1 {
     color: rgba(32, 20, 137, 0.8);

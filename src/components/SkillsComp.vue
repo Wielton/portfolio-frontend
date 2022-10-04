@@ -1,14 +1,20 @@
 <template>
-    <container app fluid>
-        <v-row id="skills-section" align="center">
-            <v-col cols="12" xs="12" sm="12" md="6" lg="6">
+    <v-parallax class="background">
+        <v-divider />
+        <div>
+        <v-row>
+            <v-col cols="6" xs="12" sm="12" md="6" lg="6">
                 <LanguagesComp />
             </v-col>
             <v-col cols="12" xs="12" sm="12" md="6" lg="6">
                 <FrameworksComp />
             </v-col>
         </v-row>
-    </container>
+        <v-row>
+
+        </v-row>
+        </div>
+    </v-parallax>
 </template>
 
 <script>
@@ -26,4 +32,8 @@ export default {
     // .skills-container {
     //     background-image: linear-gradient(to top, black, white);
     // }
+    .background {
+        height: 100em;
+        background-color: white;
+    }
 </style>

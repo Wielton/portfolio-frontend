@@ -1,9 +1,6 @@
 <template>
     <v-container fluid class="projects-main">
-        <h1 ref="projects" style="color:black">PROJECTS</h1>
-            <v-row
-                id="projects-section"
-                align="center">
+            <v-row>
                 <v-col 
                     v-for="project, i in projects"
                     :key="i"
