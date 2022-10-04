@@ -4,7 +4,7 @@
     <v-app-bar
             app
             fixed
-            color="white"
+            
             hide-on-scroll
             elevate-on-scroll
             class="Navbar"
@@ -146,10 +146,10 @@ export default {
 #app {
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: rgb(216, 206, 206);
   scroll-behavior: smooth;
   overflow: hidden;
-  
+  // padding: 0;
 }
 .app-container {
   
@@ -160,11 +160,11 @@ export default {
   
   font-size: 1em;
 }
-// .Navbar {
-//     background-image: linear-gradient(to top, white, black)
-// }
+.Navbar {
+    background-image: linear-gradient(to left, rgba(32, 20, 137, 0.8), rgb(207, 187, 187));
+}
 h1 {
-    color: black;
+    color: rgba(32, 20, 137, 0.8);
 }
 .tabs-style {
     max-width: 70%;

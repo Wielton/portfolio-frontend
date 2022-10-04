@@ -1,14 +1,14 @@
 <template>
     <v-container app fluid class="footer-container">
         <v-row>
-            <v-col cols="12" xs="12" sm="6" md="6" lg="6">
+            <v-col cols="12" xs="12" sm="6" md="6" lg="6" align-self="center">
                 <div class="footer-info">
-                <h2>Grant Wielgosz</h2>
-                <h4>Edmonton, Alberta</h4>
-                <h4>grantWielgosz@gmail.com</h4>
+                <h2 class="text name">Grant Wielgosz</h2>
+                <h4 class="text location">Edmonton, Alberta</h4>
+                <h4 class="text email">grantWielgosz@gmail.com</h4>
                 </div>
             </v-col>
-            <v-col cols="12" xs="12" sm="6" md="6" lg="6">
+            <v-col cols="12" xs="12" sm="6" md="6" lg="6" align-self="center">
                 <div class="footer-links">
                 <v-avatar
                     v-for="link, index in socialIcons"
@@ -17,7 +17,7 @@
                     >
                     <a :href="link.link">
                         <Icon
-                            style="color:black"
+                            :color="link.brandColor"
                             width="50"
                             height="50"
                             :icon="link.logo">
@@ -28,11 +28,11 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-col cols="12">
+            <v-col cols="12" align-self="center">
                 <div class="footer-copyright">
-                <p >
+                <p class="text copyright">
                     <span>
-                        <v-icon style="color:white">
+                        <v-icon style="color:#383838">
                             mdi-copyright
                         </v-icon>
                     </span>
@@ -51,8 +51,8 @@ import { Icon } from '@iconify/vue2';
         components: { Icon },
         data: () => ({
             socialIcons: [
-                {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'mdi:linkedin'},
-                {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'mdi:github'},
+                {name: 'Linkedin', link: 'https://www.linkedin.com/in/grant-wielgosz/', logo: 'mdi:linkedin', brandColor: 'lightblue'},
+                {name: 'Github', link: 'https://github.com/Wielton?tab=repositories', logo: 'mdi:github', brandColor: 'orange'},
                 
             ],
         })
@@ -63,16 +63,18 @@ import { Icon } from '@iconify/vue2';
     *div {
         text-align: center;
     }
-    *h2 h4 {
-        color: black;
-    }
-    p {
-        color: white;
+    
+    .text {
+        color: #383838;
     }
     .footer-container {
         width: 100%;
+        
+    }
+    .footer-info {
+        
     }
     .footer-links {
-
+        
     }
 </style>

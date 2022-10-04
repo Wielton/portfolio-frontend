@@ -1,49 +1,47 @@
 <template>
     <v-container fluid>
         <v-row>
-            <v-col>
-                <h1 class="language-text">Languages</h1>
-            </v-col>
-        </v-row>
-        <v-row>
-            <v-col>
-                <v-list class='list-styling' color="white">
-                    <v-list-item
-                        class="list-item"
-                        v-for='(language, index) in programmingIcons'
-                        :key='index'
-                        :language='language'
-                        >
-                        <v-list-item-avatar>
-                            <Icon :src='language.logo' :icon='language.logo' color="black"
-                                >
-                                </Icon>
-                        </v-list-item-avatar>
-                        <v-list-item-title class='language-text'>
-                            {{language.name}}
-                        </v-list-item-title>
-                    </v-list-item>
-                </v-list>
-
+            <v-col cols="12">
+                <h3 class="description">Take advantage of industry-leading frameworks providing responsive design from mobile to widescreen sizes.
+                    <br>
+                    Animations and effects add a modern touch, while colour schemes add elegance.
+                <!-- <span><h2>React</h2>
+                    <v-avatar>
+                        <Icon
+                            :src='react.logo'
+                            :icon='react.logo'
+                            :color="react.color"
+                            >
+                            </Icon>
+                    </v-avatar>
+                </span>
+                and <span><h2>Vue</h2>
+                <v-avatar>
+                        <Icon
+                            :src='vue.logo'
+                            :icon='vue.logo'
+                            :color="vue.color"
+                            >
+                            </Icon>
+                    </v-avatar>
+                    </span> -->
+                </h3>
             </v-col>
         </v-row>
     </v-container>
 </template>
 
 <script>
-    import { Icon } from '@iconify/vue2';
+    // import { Icon } from '@iconify/vue2';
     export default {
         name: 'LanguagesComp',
-        components: { Icon },
+        // components: { Icon },
         data: () => ({
-            programmingIcons: [
-                    
-                    {name: 'Vue.js', logo: 'mdi:vuejs'},
-                    {name: 'React', logo: 'mdi:react'},
-                    {name: 'Python', logo: 'mdi:language-python'},
-                    {name: 'mySQL', logo: 'mdi:database'},
-                    {name: 'Node.js', logo: 'mdi:nodejs'},
-                    ],
+            react: {name: 'React', logo: 'mdi:react', color: '#61DBFB'},
+            vue: {name: 'Vue.js', logo: 'mdi:vuejs', color: '#42b883'},
+            python: {name: 'Python', logo: 'mdi:language-python'},
+            mysql : {name: 'mySQL', logo: 'mdi:database'},
+            
         })
     }
 </script>
@@ -54,7 +52,9 @@
     border: none;
 }
     
-    .language-text {
-        color: black;
+    .description {
+        font-size:1.3em;
+        font-weight:bold;
+        color: rgb(101, 101, 101);
     }
 </style>

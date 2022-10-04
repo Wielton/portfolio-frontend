@@ -1,30 +1,26 @@
 <template>
-        <v-container class="outer" >
+        <v-container class="outer" fluid>
             <v-row>
-                <v-col cols="12" xs="12" sm="12" md="12" lg="12">
-                    <v-container class="text">
-                        <v-row> 
-                            <v-col cols="8">
-                                <div class="full-div-text">Full</div>
-                            </v-col>
-                            <v-col cols="4">
-                                <div class="stack-div-text">
-                                    <div class="text-stack-s"><h2>S</h2></div>
-                                    <div class="text-stack-t"><h2>T</h2></div>
-                                    <div class="text-stack-a"><h2>A</h2></div>
-                                    <div class="text-stack-c"><h2>C</h2></div>
-                                    <div class="text-stack-k"><h2>K</h2></div>                        
-                                </div>
+                <v-col cols="12">
+                    <v-row> 
+                        <v-col cols="8" xs="4">
+                            <h1 class="full-div-text animate__animated animate__bounceInLeft">Full</h1>
+                        </v-col>
+                        <v-col cols="4" xs="2">
+                                    <h2 class="text stack-s animate__animated animate__bounceInDown animate__delay-5s">S</h2>
+                                    <h2 class="text stack-t animate__animated animate__bounceInDown animate__delay-4s">T</h2>
+                                    <h2 class="text stack-a animate__animated animate__bounceInDown animate__delay-3s">A</h2>                      
+                                    <h2 class="text stack-c animate__animated animate__bounceInDown animate__delay-2s">C</h2>
+                                    <h2 class="text stack-k animate__animated animate__bounceInDown animate__delay-1s">K</h2>
+                                
                             </v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="12">
-                                <div class="dev-div">
-                                    <h1 class="dev-div-h1">Development</h1>
-                                </div>
+                                <h1 class="dev-div-h1 animate__animated animate__bounceInRight">Development</h1>
                             </v-col>
                         </v-row>
-                    </v-container>
+                    
                 </v-col>
                 <!-- <v-col cols="12" xs="12" sm="12" md="6" lg="6">
                     <h4 class="text">
@@ -42,6 +38,7 @@
 </template>
 
 <script>
+import 'animate.css';
 export default {
     name: 'HeroComp',
     data: () => {
@@ -58,20 +55,50 @@ export default {
         
     }
     .full-div-text {
-        display: block;
-        font-size: 10em;
-        
+        font-size: 7em;
+        color: rgba(32, 20, 137, 0.5);
     }
     .stack-div-text {
-        display: block;
+        
         font-size: 2em;
     }
     .dev-div-h1 {
-        display:block;
+        color: rgba(32, 20, 137, 0.5);
         font-size: 4em;
+        @media screen and (max-width: 415px) {
+                font-size: 3em;
+        }
     }
     
     
+    .text-stack-div {
+        
+        position: relative;
+        }
+    .text {
+        color: rgba(32, 20, 137, 0.6);
+        font-size: 3em;
+    }
+    .stack-s { 
+        --animate-delay: 0.1s;
+        left: 70%;
+        }
+    .stack-t { 
+        --animate-delay: 0.1s;
+        left: 70%;
+        }
+    .stack-a { 
+        --animate-delay: 0.1s;
+        left: 70%;
+        }
+    .stack-c { 
+        --animate-delay: 0.1s;
+        left: 70%;
+        }
+    .stack-k { 
+        --animate-delay: 100ms;
+        left: 70%;
+        }
     
 </style>
 
