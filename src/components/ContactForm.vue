@@ -70,7 +70,6 @@ export default {
 <style lang="scss" scoped>
 .contact-form {
     align-items: center;
-    color: black;
     background-color: rgb(216, 206, 206);
 }
 </style>

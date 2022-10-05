@@ -1,8 +1,7 @@
 <template>
     <v-container fluid>
-        <h1 ref="contact" style="color: black">CONTACT</h1>
-        <v-row id="contact-section" align="center">
-        <v-col cols="12" xm="6" sm="6" md="6" lg="6" justify="center">
+        <v-row align="center">
+        <v-col cols="12" xs="6" sm="6" md="6" lg="4" xl="4" justify="center">
             <ContactForm />
         </v-col>
         <v-col>
@@ -31,7 +30,8 @@ export default {
 <style lang="scss" scoped>
     .contact-message {
         h3 {
-            color: black;
+        color: grey;
+            
         }
     }
 </style>

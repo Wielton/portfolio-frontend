@@ -1,12 +1,12 @@
 <template>
         <v-container class="outer" fluid>
-            <v-row class="hero-row-top">
+            <v-row>
                 <v-col cols="12">
-                    <v-row> 
-                        <v-col cols="8" xs="4">
+                    <v-row class="hero-row-top"> 
+                        <v-col cols="8" xs="4" align="start">
                             <h1 class="full-div-text animate__animated animate__bounceInLeft">Full</h1>
                         </v-col>
-                        <v-col cols="4" xs="2">
+                        <v-col cols="4" xs="2" align="center">
                             <div class="text-stack-div">  
                                 <h2 class="text stack-s animate__animated animate__bounceInDown animate__delay-5s">S</h2>
                                 <h2 class="text stack-t animate__animated animate__bounceInDown animate__delay-4s">T</h2>
@@ -17,7 +17,7 @@
                         </v-col>
                     </v-row>
                     <v-row>
-                            <v-col cols="12">
+                            <v-col cols="8" align="center">
                                 <h1 class="dev-div-h1 animate__animated animate__bounceInRight">Development</h1>
                             </v-col>
                         </v-row>
@@ -52,15 +52,16 @@ export default {
 <style lang="scss" scoped>
     .outer {
         width: 100%;
-        height: 100%;
+        height: 50%;
         
     }
     .hero-row-top {
-        height: 30%;
+        height: 60%;
     }
     .full-div-text {
+        
         font-size: 7em;
-        color: rgba(32, 20, 137, 0.5);
+        color: rgba(32, 20, 137, 0.6);
         @media screen and (min-width: 601px) {
                 font-size: 15em;
         }
@@ -69,10 +70,13 @@ export default {
         }
     }
     .dev-div-h1 {
-        color: rgba(32, 20, 137, 0.5);
-        font-size: 4em;
-        @media screen and (max-width: 415px) {
-                font-size: 3em;
+        color: rgba(32, 20, 137, 0.6);
+        font-size: 3em;
+        @media screen and (min-width: 601px) {
+                font-size: 5em;
+        }
+        @media screen and (min-width: 1000px) {
+                font-size: 7em;
         }
     }
     

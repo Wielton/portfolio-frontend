@@ -1,29 +1,29 @@
 <template>
 <!-- <v-img :src="require('../src/assets/verticaljspic.jpg')"> -->
-  <v-app app class="app-container">
+  <v-app app class="app-container" ref="top">
     <v-app-bar
             app
             fixed
-            
+            elevation="0"
+            color="transparent"
             hide-on-scroll
-            elevate-on-scroll
             class="Navbar"
             >
+            
             <h1 class="hidden-md-and-up">GW</h1>
             <h1 class="hidden-sm-and-down">Grant Wielgosz</h1>
-            <v-spacer></v-spacer>
+            
             
             <v-tabs
                 right
-                color="black"
-                class="hidden-sm-and-down tabs-style"
+                class="hidden-sm-and-down tabs"
                 hide-slider
                 >
                 <v-tab 
                     v-for="(link, index) in navLinks"
                     :key="index"
-                    
-                    style="color: black" @click="scrollsTo(link.url)">{{link.name}}
+                    class="tab-links"
+                    @click="scrollsTo(link.url)">{{link.name}}
                 </v-tab>
             </v-tabs>
             <v-btn
@@ -55,6 +55,7 @@
             </v-list>
             <v-btn @click="drawer = !drawer">X</v-btn>
         </v-navigation-drawer>
+        
       <v-main
         app
         align="center"
@@ -121,8 +122,12 @@ export default {
   methods: {
     scrollsTo(refName) {
             var element = this.$refs[refName];
-            var top = element.offsetTop;
-            window.scrollTo(0, top);
+            var element_position = element.offsetTop;
+            var top = element.offsetTop - element_position;
+            console.log(top);
+            
+            window.scrollTo(0, element_position);
+
             
         },
   },
@@ -149,17 +154,22 @@ export default {
   
   font-size: 1em;
 }
-.Navbar {
-    background-image: linear-gradient(to left, rgba(141, 0, 33, 0.8), rgb(207, 187, 187));
-}
+// .Navbar {
+//     background-image: linear-gradient(to left, rgba(141, 0, 33, 0.8), rgb(207, 187, 187));
+// }
 .footer {
     background-color: rgb(216, 206, 206);
 }
 h1 {
-    color: rgba(32, 20, 137, 0.8);
+  color: rgba(141, 0, 33, 0.8);
+    // color: rgba(32, 20, 137, 0.8);
 }
-.tabs-style {
+.tabs {
+    
     max-width: 70%;
+}
+.tab-links {
+  color:rgba(141, 0, 33, 0.8);
 }
 .material-symbols-outlined {
     color: black;
