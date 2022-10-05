@@ -1,6 +1,6 @@
 <template>
         
-        <div class="skills-div">
+        <v-container fluid class="skills-div">
         <v-row>
             <v-col cols="6" xs="12" sm="12" md="6" lg="6">
                 <LanguagesComp />
@@ -12,7 +12,7 @@
         <v-row>
 
         </v-row>
-        </div>
+        </v-container>
 </template>
 
 <script>
@@ -49,7 +49,5 @@ export default {
     // .skills-container {
     //     background-image: linear-gradient(to top, black, white);
     // }
-    .skills-div {
-        height: 30em;
-    }
+    
 </style>

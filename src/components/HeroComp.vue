@@ -3,10 +3,10 @@
             <v-row>
                 <v-col cols="12">
                     <v-row class="hero-row-top"> 
-                        <v-col cols="8" xs="4" align="start">
+                        <v-col cols="8" xs="4" align="end">
                             <h1 class="full-div-text animate__animated animate__bounceInLeft">Full</h1>
                         </v-col>
-                        <v-col cols="4" xs="2" align="center">
+                        <v-col cols="4" xs="2" align="start">
                             <div class="text-stack-div">  
                                 <h2 class="text stack-s animate__animated animate__bounceInDown animate__delay-5s">S</h2>
                                 <h2 class="text stack-t animate__animated animate__bounceInDown animate__delay-4s">T</h2>
@@ -17,7 +17,7 @@
                         </v-col>
                     </v-row>
                     <v-row>
-                            <v-col cols="8" align="center">
+                            <v-col cols="10" align="end">
                                 <h1 class="dev-div-h1 animate__animated animate__bounceInRight">Development</h1>
                             </v-col>
                         </v-row>
@@ -52,14 +52,13 @@ export default {
 <style lang="scss" scoped>
     .outer {
         width: 100%;
-        height: 50%;
+        height: 80%;
         
     }
     .hero-row-top {
-        height: 60%;
+        height: 40%;
     }
     .full-div-text {
-        
         font-size: 7em;
         color: rgba(32, 20, 137, 0.6);
         @media screen and (min-width: 601px) {
@@ -82,7 +81,7 @@ export default {
     
     
     .text-stack-div {
-        
+        height: 100%;
         position: relative;
         }
     .text {
@@ -93,7 +92,6 @@ export default {
     }
     .stack-s { 
         --animate-delay: 0.1s;
-        left: 70%;
         font-size: 2em;
         @media screen and (min-width: 601px) {
                 font-size: 4em;
@@ -104,7 +102,6 @@ export default {
         }
     .stack-t { 
         --animate-delay: 0.1s;
-        left: 70%;
         font-size: 2em;
         @media screen and (min-width: 601px) {
                 font-size: 4em;
@@ -115,7 +112,6 @@ export default {
         }
     .stack-a { 
         --animate-delay: 0.1s;
-        left: 70%;
         font-size: 2em;
         @media screen and (min-width: 601px) {
                 font-size: 4em;
@@ -126,7 +122,6 @@ export default {
         }
     .stack-c { 
         --animate-delay: 0.1s;
-        left: 70%;
         font-size: 2em;
         @media screen and (min-width: 601px) {
                 font-size: 4em;
@@ -137,7 +132,6 @@ export default {
         }
     .stack-k { 
         --animate-delay: 100ms;
-        left: 70%;
         font-size: 2em;
         @media screen and (min-width: 601px) {
                 font-size: 4em;

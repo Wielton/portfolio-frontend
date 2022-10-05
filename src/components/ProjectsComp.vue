@@ -1,5 +1,5 @@
 <template>
-    <div class="projects-main">
+    <v-container fluid class="projects-main">
             <v-row>
                 <v-col 
                     v-for="project, i in projects"
@@ -37,7 +37,7 @@
                 
             </v-col>
         </v-row>
-    </div>
+    </v-container>
 </template>
 
 <script>
@@ -54,9 +54,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .projects-main {
-        height: 40em;
-    }
+    
     .v-card--reveal {
         align-items: center;
         bottom: 0;

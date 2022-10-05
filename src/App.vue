@@ -1,6 +1,6 @@
 <template>
 <!-- <v-img :src="require('../src/assets/verticaljspic.jpg')"> -->
-  <v-app app class="app-container" ref="top">
+  <v-app app class="app-container pa-0 ma-0" ref="top">
     <v-app-bar
             app
             fixed
@@ -59,6 +59,7 @@
       <v-main
         app
         align="center"
+
         >
         <v-container fluid app>
           <v-row ref="hero" class="hero" >
@@ -139,16 +140,14 @@ export default {
 #app {
   height: 100%;
   width: 100%;
-  background-color: rgb(216, 206, 206);
+  background-color: rgb(206, 213, 216);
   scroll-behavior: smooth;
   overflow: hidden;
-  
+  padding: 0;
+  margin: 0;
   // padding: 0;
 }
-.app-container {
-  
-  
-}
+
 .description-content {
   display: flex;
   
@@ -158,7 +157,7 @@ export default {
 //     background-image: linear-gradient(to left, rgba(141, 0, 33, 0.8), rgb(207, 187, 187));
 // }
 .footer {
-    background-color: rgb(216, 206, 206);
+    background-color: rgb(206, 213, 216);
 }
 h1 {
   color: rgba(141, 0, 33, 0.8);

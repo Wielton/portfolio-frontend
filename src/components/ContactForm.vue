@@ -1,5 +1,4 @@
 <template>
-    <div>
     <v-card class="contact-form" elevation="0" cols="12">
         <v-text-field
             color='rgba(226, 86, 22, 0.8)'
@@ -46,7 +45,6 @@
                 >Add Review</v-btn>
         </v-card-actions>
     </v-card>
-    </div>
 </template>
 
 <script>
@@ -70,6 +68,6 @@ export default {
 <style lang="scss" scoped>
 .contact-form {
     align-items: center;
-    background-color: rgb(216, 206, 206);
+    background-color: rgb(206, 213, 216);
 }
 </style>
