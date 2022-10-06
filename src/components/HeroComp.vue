@@ -53,7 +53,7 @@ export default {
     .outer {
         width: 100%;
         height: 80%;
-        
+        background-image: linear-gradient(to top, rgba(32, 20, 137, 0.6), rgb(206, 213, 216));
     }
     .hero-row-top {
         height: 40%;
