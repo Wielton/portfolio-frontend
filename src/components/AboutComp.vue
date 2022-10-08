@@ -4,13 +4,11 @@
             align="center"
             class="design-section"
             >
+            
             <v-col cols="12" sm="6" xl="6" >
-                <h1 class="seo-h1">
+                <h1 class="h1">
                     Design
                 </h1>  
-            
-            
-            
                 <p class="description-p">
                     Using rich colour schemes, readable layout, semantic markup, and complementing font styles, I create attractive and usable 
                 <span class="p-span">UI/UX</span>
@@ -36,7 +34,8 @@
             
             class="seo-section"
             >
-            <v-col cols="12" sm="6" xl="12">
+            <v-spacer class="hidden-xs-and-down"></v-spacer>
+            <v-col cols="12" xs="12" sm="6" md="6" xl="6">
                 <h1 class="seo-h1">
                     SEO
                 </h1>
@@ -50,7 +49,7 @@
             class="secure-section"
             align="center">
             <v-col cols="12" sm="12" xl="6">
-                <h1 class="secure-h1">
+                <h1 class="dependability-h1">
                     Dependability
                 </h1>
                 <p class="description-depend">Safe, trusted sites keep your 
@@ -71,6 +70,10 @@
 <style lang="scss" scoped>
     .about-div {
     }
+    .design-section {
+        padding: 5em;
+        margin: 0;
+    }
     .seo-section {
         padding: 5em;
         margin: 0;
@@ -83,6 +86,12 @@
         font-size: 3em;
         color: #46344e;
         
+    }
+    .seo-h1 {
+        color: #3d2e44;
+    }
+    .dependability-h1 {
+        color: #332639;
     }
     .description-p {
         font-size:1.3em;

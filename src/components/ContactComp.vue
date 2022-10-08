@@ -1,15 +1,15 @@
 <template>
     <v-container fluid>
         <v-row align="center" class="pa-12">
-        <v-col cols="12" xs="6" sm="6" md="6" lg="4" xl="4" justify="center">
-            <ContactForm />
-        </v-col>
-        <v-col>
-            <p class="description-p">
-                Leave a your name, email, comment, and company you represent
-                and I will promptly return your message!
-            </p>
-        </v-col>
+            <v-col cols="12" xs="6" sm="12" md="6" lg="8" xl="8" justify="center">
+                <p class="description-p">
+                    Leave your name, email, comment, and company you represent
+                    and I will promptly return your message!
+                </p>
+            </v-col>
+            <v-col cols="12" xs="6" sm="12" md="6" lg="4" xl="4" justify="center">
+                <ContactForm />
+            </v-col>
         </v-row>
     </v-container>
 </template>
@@ -28,5 +28,6 @@ export default {
         font-weight:bold;
         color: #9d8d8f;
         margin: 0;
+        padding: 5em;
     }
 </style>

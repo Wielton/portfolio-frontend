@@ -1,19 +1,34 @@
 <template>
-<div>
+<div class="languages-section">
     <h3 class="description">
-                Using the powerful <span class="p-span">JavaScript </span>programming language, I am untethered and free from design restrictions, 
-
-                <br>
-                opening up an endless creative environment.
-            </h3>
-            <v-avatar v-for="language, index in languages" :key="index" :language="language">
-                <Icon
-                    :src='language.logo'
-                    :icon='language.logo'
-                    color="#46344e"
-                    >
-                </Icon>
-            </v-avatar>
+        Using <span class="p-span">powerful programming languages</span>, I am untethered and free from design restrictions, 
+        <br>
+        opening up an extensive creative environment.
+    </h3>
+    <v-avatar class="vue logo">
+        <Icon
+            :src='languages.vue.logo'
+            :icon='languages.vue.logo'>
+        </Icon>
+    </v-avatar>
+    <v-avatar class="react logo">
+        <Icon
+            :src='languages.react.logo'
+            :icon='languages.react.logo'>
+        </Icon>
+    </v-avatar>
+    <v-avatar class="python logo">
+        <Icon
+            :src='languages.python.logo'
+            :icon='languages.python.logo'>
+        </Icon>
+    </v-avatar>
+    <v-avatar class="mysql logo">
+        <Icon
+            :src='languages.mysql.logo'
+            :icon='languages.mysql.logo'>
+        </Icon>
+    </v-avatar>
 </div>
                 <!-- <span><h2>React</h2>
                     <v-avatar>
@@ -36,20 +51,25 @@
         name: 'LanguagesComp',
         components: { Icon },
         data: () => ({
-            languages: [
-            {name: 'React', logo: 'mdi:react', color: '#61DBFB'},
-            {name: 'Vue.js', logo: 'mdi:vuejs', color: '#42b883'},
-            {name: 'Python', logo: 'mdi:language-python'},
-            {name: 'mySQL', logo: 'mdi:database'},
-            ]
+            languages: {
+                react: {name: 'React', logo: 'mdi:react', color: '#61DBFB'},
+                vue: {name: 'Vue.js', logo: 'mdi:vuejs', color: '#42b883'},
+                python : {name: 'Python', logo: 'mdi:language-python'},
+                mysql : {name: 'mySQL', logo: 'mdi:database'},
+            }
+            
+            
+            
+            
+            
         })
     }
 </script>
 
 <style lang="scss" scoped>
 
-.list-item {
-    border: none;
+.logo {
+    color: #332639;
 }
 .languages-section {
         padding: 5em;

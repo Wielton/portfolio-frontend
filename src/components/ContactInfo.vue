@@ -5,7 +5,7 @@
                 <div class="footer-info">
                 <h2 class="text name">Grant Wielgosz</h2>
                 <h4 class="text location">Edmonton, Alberta</h4>
-                <h4 class="text email">grantWielgosz@gmail.com</h4>
+                <h4 class="text email">grantwielgosz@gmail.com</h4>
                 </div>
             </v-col>
             <v-col cols="12" xs="12" sm="6" md="6" lg="6" align-self="center">

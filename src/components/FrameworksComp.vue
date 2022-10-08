@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="frameworks-section">
     <h3 class="description">
         I take advantage of industry-leading frameworks to provide a <span class="p-span">responsive design</span> from mobile to widescreen sizes.
         <br>
@@ -32,9 +32,10 @@ import { Icon } from '@iconify/vue2';
 </script>
 
 <style lang="scss" scoped>
-.list-item {
-    
-}
+.frameworks-section {
+        padding: 5em;
+        margin: 0;
+    }
     .description {
         font-size:1.3em;
         font-weight:bold;

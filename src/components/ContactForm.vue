@@ -1,7 +1,8 @@
 <template>
     <v-card class="contact-form" elevation="0" cols="12">
         <v-text-field
-            color='#425a7d'
+            class="active"
+            color="#332639"
             background-color='#9d8d8f'
             v-model="firstName"
             type="text"
@@ -10,7 +11,7 @@
             >
         </v-text-field>
         <v-text-field
-            color='#425a7d'
+            color="#332639"
             background-color='#9d8d8f'
             v-model="companyName"
             type="text"
@@ -19,7 +20,7 @@
             >
         </v-text-field>
         <v-text-field
-            color='#425a7d'
+            color="#332639"
             background-color='#9d8d8f'
             v-model="email"
             type="email"
@@ -28,7 +29,7 @@
             >
         </v-text-field>
         <v-textarea
-            color='#425a7d'
+            color="#332639"
             background-color='#9d8d8f'
             v-model="comment"
             type="comment"
@@ -39,12 +40,13 @@
         <v-card-actions>
             <v-spacer />
             <v-btn
+                class="button"
                 rounded
                 text
                 elevation="2"
                 color="#9d8d8f"
                 @click="postComment(firstName, companyName, email, comment)"
-                >Add Review</v-btn>
+                >Add a Review</v-btn>
                 <v-spacer />
         </v-card-actions>
     </v-card>
@@ -72,5 +74,9 @@ export default {
 .contact-form {
     background-color: inherit;
     color: whitesmoke;
+    padding: 2.5em;
+}
+.button {
+    background-color: #332639;
 }
 </style>

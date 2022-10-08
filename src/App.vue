@@ -18,13 +18,15 @@
                 right
                 class="hidden-sm-and-down tabs"
                 hide-slider
+                color="#faed26"
                 >
                 <v-tab
                     
                     v-for="(link, index) in navLinks"
                     :key="index"
-                    class="tab-links"
+                    class="tab-links white--text"
                     @click="scrollsTo(link.url)">{{link.name}}
+                    
                 </v-tab>
             </v-tabs>
             
@@ -33,7 +35,7 @@
                 style="background-color: transparent"
                 max-width="50"
                 elevation="0"
-                class="hidden-xs-and-up"
+                class="hidden-md-and-up"
                 >
                 <span class="material-symbols-outlined">menu</span>
                 
@@ -176,7 +178,6 @@ h1 {
 }
 .tab-links {
   color: #faed26;
-  
 }
 .material-symbols-outlined {
     color: #faed26;
