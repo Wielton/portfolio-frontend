@@ -1,34 +1,25 @@
 <template>
-    <h3 class="description">Take advantage of industry-leading frameworks providing responsive design from mobile to widescreen sizes.
-                    <br>
-                    Animations and effects add a modern touch, while colour schemes add elegance.
-                <!-- <span><h2>React</h2>
-                    <v-avatar>
-                        <Icon
-                            :src='react.logo'
-                            :icon='react.logo'
-                            :color="react.color"
-                            >
-                            </Icon>
-                    </v-avatar>
-                </span>
-                and <span><h2>Vue</h2>
-                <v-avatar>
-                        <Icon
-                            :src='vue.logo'
-                            :icon='vue.logo'
-                            :color="vue.color"
-                            >
-                            </Icon>
-                    </v-avatar>
-                    </span> -->
-                </h3>
+<div>
+    <h3 class="description">
+        I take advantage of industry-leading frameworks to provide a <span class="p-span">responsive design</span> from mobile to widescreen sizes.
+        <br>
+        Animations and effects add a modern touch, while colour schemes add elegance.
+    </h3>
+    <v-avatar v-for="framework, index in frameworks" :key="index" :framework="framework">
+        <Icon
+            :src='framework.logo'
+            :icon='framework.logo'
+            color="#46344e"
+        >
+        </Icon>
+    </v-avatar>
+</div>
 </template>
 
 <script>
-// import { Icon } from '@iconify/vue2';
+import { Icon } from '@iconify/vue2';
     export default {
-        // components: { Icon },
+        components: { Icon },
         data: () => ({
             
             frameworks: [
@@ -44,7 +35,16 @@
 .list-item {
     
 }
-    .language-text {
-        color: black;
+    .description {
+        font-size:1.3em;
+        font-weight:bold;
+        color: #b3aaab;
+    }
+    .p-span {
+        // margin: auto;
+
+        font-size:1.7em;
+        font-weight:bold;
+        color: #faed26;
     }
 </style>

@@ -54,7 +54,9 @@
 </script>
 
 <style lang="scss" scoped>
-    
+    .projects-main {
+        
+    }
     .v-card--reveal {
         align-items: center;
         bottom: 0;
@@ -71,7 +73,7 @@
         display: grid;
     }
     .text-h2 {
-        color: rgba(32, 20, 137, 0.6);
+        color: #46344e;
         
     }
 </style>

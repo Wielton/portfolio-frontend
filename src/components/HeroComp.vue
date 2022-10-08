@@ -53,14 +53,13 @@ export default {
     .outer {
         width: 100%;
         height: 80%;
-        background-image: linear-gradient(to top, rgba(32, 20, 137, 0.6), rgb(206, 213, 216));
     }
     .hero-row-top {
         height: 40%;
     }
     .full-div-text {
         font-size: 7em;
-        color: rgba(32, 20, 137, 0.6);
+        color: #faed26;
         @media screen and (min-width: 601px) {
                 font-size: 15em;
         }
@@ -69,7 +68,8 @@ export default {
         }
     }
     .dev-div-h1 {
-        color: rgba(32, 20, 137, 0.6);
+        color: whitesmoke;
+        
         font-size: 3em;
         @media screen and (min-width: 601px) {
                 font-size: 5em;
@@ -85,12 +85,12 @@ export default {
         position: relative;
         }
     .text {
-        color: rgba(32, 20, 137, 0.6);
+        color: whitesmoke;
         margin: 0;
         height: 10%;
         top: 75%;
     }
-    .stack-s { 
+    .stack-s {
         --animate-delay: 0.1s;
         font-size: 2em;
         @media screen and (min-width: 601px) {
@@ -100,7 +100,7 @@ export default {
                 font-size: 6em;
         }
         }
-    .stack-t { 
+    .stack-t {
         --animate-delay: 0.1s;
         font-size: 2em;
         @media screen and (min-width: 601px) {
@@ -110,7 +110,7 @@ export default {
                 font-size: 6em;
         }
         }
-    .stack-a { 
+    .stack-a {
         --animate-delay: 0.1s;
         font-size: 2em;
         @media screen and (min-width: 601px) {
@@ -120,7 +120,7 @@ export default {
                 font-size: 6em;
         }
         }
-    .stack-c { 
+    .stack-c {
         --animate-delay: 0.1s;
         font-size: 2em;
         @media screen and (min-width: 601px) {
@@ -130,7 +130,7 @@ export default {
                 font-size: 6em;
         }
         }
-    .stack-k { 
+    .stack-k {
         --animate-delay: 100ms;
         font-size: 2em;
         @media screen and (min-width: 601px) {

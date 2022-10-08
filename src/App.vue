@@ -10,28 +10,30 @@
             class="Navbar"
             >
             
-            <h1 class="hidden-md-and-up">GW</h1>
-            <h1 class="hidden-sm-and-down">Grant Wielgosz</h1>
+            <h1 class="hidden-md-and-up"><span class="yellow-text">G</span><span class="white-text">W</span></h1>
+            <h1 class="hidden-sm-and-down"><span class="yellow-text">Grant</span><span class="white-text"> Wielgosz</span></h1>
             
-            
+            <v-spacer />
             <v-tabs
                 right
                 class="hidden-sm-and-down tabs"
                 hide-slider
                 >
-                <v-tab 
+                <v-tab
+                    
                     v-for="(link, index) in navLinks"
                     :key="index"
                     class="tab-links"
                     @click="scrollsTo(link.url)">{{link.name}}
                 </v-tab>
             </v-tabs>
+            
             <v-btn
                 @click="drawer = !drawer"
                 style="background-color: transparent"
                 max-width="50"
                 elevation="0"
-                class="hidden-md-and-up"
+                class="hidden-xs-and-up"
                 >
                 <span class="material-symbols-outlined">menu</span>
                 
@@ -79,7 +81,7 @@
           </v-row>
         </v-container>
       </v-main>
-      <v-footer class="footer">
+      <v-footer class="footer" color="transparent">
         <ContactInfo />
       </v-footer>
   </v-app>
@@ -140,7 +142,7 @@ export default {
 #app {
   height: 100%;
   width: 100%;
-  background-color: rgb(206, 213, 216);
+  background-image: linear-gradient(to top, #46344e, #5a5560, #9d8d8f);
   scroll-behavior: smooth;
   overflow: hidden;
   padding: 0;
@@ -156,11 +158,16 @@ export default {
 // .Navbar {
 //     background-image: linear-gradient(to left, rgba(141, 0, 33, 0.8), rgb(207, 187, 187));
 // }
-.footer {
-    background-color: rgb(206, 213, 216);
+
+.yellow-text {
+  color: #faed26;
+}
+.white-text {
+  color: whitesmoke;
 }
 h1 {
-  color: rgba(141, 0, 33, 0.8);
+    color: #425a7d;
+  
     // color: rgba(32, 20, 137, 0.8);
 }
 .tabs {
@@ -168,10 +175,11 @@ h1 {
     max-width: 70%;
 }
 .tab-links {
-  color:rgba(141, 0, 33, 0.8);
+  color: #faed26;
+  
 }
 .material-symbols-outlined {
-    color: black;
+    color: #faed26;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,

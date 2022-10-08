@@ -1,8 +1,20 @@
 <template>
-    
-                <h3 class="description">Take advantage of industry-leading frameworks providing responsive design from mobile to widescreen sizes.
-                    <br>
-                    Animations and effects add a modern touch, while colour schemes add elegance.
+<div>
+    <h3 class="description">
+                Using the powerful <span class="p-span">JavaScript </span>programming language, I am untethered and free from design restrictions, 
+
+                <br>
+                opening up an endless creative environment.
+            </h3>
+            <v-avatar v-for="language, index in languages" :key="index" :language="language">
+                <Icon
+                    :src='language.logo'
+                    :icon='language.logo'
+                    color="#46344e"
+                    >
+                </Icon>
+            </v-avatar>
+</div>
                 <!-- <span><h2>React</h2>
                     <v-avatar>
                         <Icon
@@ -14,30 +26,22 @@
                     </v-avatar>
                 </span>
                 and <span><h2>Vue</h2>
-                <v-avatar>
-                        <Icon
-                            :src='vue.logo'
-                            :icon='vue.logo'
-                            :color="vue.color"
-                            >
-                            </Icon>
-                    </v-avatar>
+                
                     </span> -->
-                </h3>
-            
+    
 </template>
-
 <script>
-    // import { Icon } from '@iconify/vue2';
+    import { Icon } from '@iconify/vue2';
     export default {
         name: 'LanguagesComp',
-        // components: { Icon },
+        components: { Icon },
         data: () => ({
-            react: {name: 'React', logo: 'mdi:react', color: '#61DBFB'},
-            vue: {name: 'Vue.js', logo: 'mdi:vuejs', color: '#42b883'},
-            python: {name: 'Python', logo: 'mdi:language-python'},
-            mysql : {name: 'mySQL', logo: 'mdi:database'},
-            
+            languages: [
+            {name: 'React', logo: 'mdi:react', color: '#61DBFB'},
+            {name: 'Vue.js', logo: 'mdi:vuejs', color: '#42b883'},
+            {name: 'Python', logo: 'mdi:language-python'},
+            {name: 'mySQL', logo: 'mdi:database'},
+            ]
         })
     }
 </script>
@@ -47,10 +51,21 @@
 .list-item {
     border: none;
 }
+.languages-section {
+        padding: 5em;
+        margin: 0;
+    }
     
     .description {
         font-size:1.3em;
         font-weight:bold;
-        color: rgb(101, 101, 101);
+        color: #b3aaab;
+    }
+    .p-span {
+        // margin: auto;
+
+        font-size:1.7em;
+        font-weight:bold;
+        color: #faed26;
     }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <v-card class="contact-form" elevation="0" cols="12">
         <v-text-field
-            color='rgba(226, 86, 22, 0.8)'
-            background-color='white'
+            color='#425a7d'
+            background-color='#9d8d8f'
             v-model="firstName"
             type="text"
             outlined
@@ -10,8 +10,8 @@
             >
         </v-text-field>
         <v-text-field
-            color='rgba(226, 86, 22, 0.8)'
-            background-color='white'
+            color='#425a7d'
+            background-color='#9d8d8f'
             v-model="companyName"
             type="text"
             outlined
@@ -19,8 +19,8 @@
             >
         </v-text-field>
         <v-text-field
-            color='rgba(226, 86, 22, 0.8)'
-            background-color='white'
+            color='#425a7d'
+            background-color='#9d8d8f'
             v-model="email"
             type="email"
             outlined
@@ -28,21 +28,24 @@
             >
         </v-text-field>
         <v-textarea
-            color='rgba(226, 86, 22, 0.8)'
-            background-color='white'
+            color='#425a7d'
+            background-color='#9d8d8f'
             v-model="comment"
             type="comment"
             outlined
             placeholder="Leave a comment..."
             >
         </v-textarea>
-        <v-spacer></v-spacer>
         <v-card-actions>
+            <v-spacer />
             <v-btn
-                
-                color="transparent"
+                rounded
+                text
+                elevation="2"
+                color="#9d8d8f"
                 @click="postComment(firstName, companyName, email, comment)"
                 >Add Review</v-btn>
+                <v-spacer />
         </v-card-actions>
     </v-card>
 </template>
@@ -67,7 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form {
-    align-items: center;
-    background-color: rgb(206, 213, 216);
+    background-color: inherit;
+    color: whitesmoke;
 }
 </style>
