@@ -5,11 +5,11 @@
         <br>
         Animations and effects add a modern touch, while colour schemes add elegance.
     </h3>
-    <v-avatar v-for="framework, index in frameworks" :key="index" :framework="framework">
+    <v-avatar v-for="framework, index in frameworks" :key="index" :framework="framework" class="icon-color">
         <Icon
             :src='framework.logo'
             :icon='framework.logo'
-            color="#46344e"
+            
         >
         </Icon>
     </v-avatar>
@@ -48,4 +48,10 @@ import { Icon } from '@iconify/vue2';
         font-weight:bold;
         color: #faed26;
     }
+    .icon-color {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, rgba(32, 20, 137, 0.6), white);
+}
 </style>

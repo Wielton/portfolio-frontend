@@ -5,7 +5,7 @@
         <br>
         opening up an extensive creative environment.
     </h3>
-    <v-avatar class="vue logo">
+    <!-- <v-avatar class="vue logo">
         <Icon
             :src='languages.vue.logo'
             :icon='languages.vue.logo'>
@@ -28,7 +28,7 @@
             :src='languages.mysql.logo'
             :icon='languages.mysql.logo'>
         </Icon>
-    </v-avatar>
+    </v-avatar> -->
 </div>
                 <!-- <span><h2>React</h2>
                     <v-avatar>
@@ -46,10 +46,10 @@
     
 </template>
 <script>
-    import { Icon } from '@iconify/vue2';
+    // import { Icon } from '@iconify/vue2';
     export default {
         name: 'LanguagesComp',
-        components: { Icon },
+        // components: { Icon },
         data: () => ({
             languages: {
                 react: {name: 'React', logo: 'mdi:react', color: '#61DBFB'},

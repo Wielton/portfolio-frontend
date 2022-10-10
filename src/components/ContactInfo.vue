@@ -10,22 +10,20 @@
             </v-col>
             <v-col cols="12" xs="12" sm="6" md="6" lg="6" align-self="center">
                 <div class="footer-links">
-                <v-avatar
-                    v-for="link, index in socialIcons"
-                    :key="index"
-                    :link="link"
-                    >
-                    <a :href="link.link">
-                        <Icon
-                            style="color: #9d8d8f"
-                            width="50"
-                            height="50"
-                            :icon="link.logo">
-                        </Icon>
-                    </a>
-                    <v-spacer></v-spacer>
-                </v-avatar>
-                
+                    <v-avatar
+                        v-for="link, index in socialIcons"
+                        :key="index"
+                        :link="link"
+                        >
+                        <a :href="link.link">
+                            <Icon
+                                style="color: #9d8d8f"
+                                width="50"
+                                height="50"
+                                :icon="link.logo">
+                            </Icon>
+                        </a>
+                    </v-avatar>
                 </div>
             </v-col>
         </v-row>

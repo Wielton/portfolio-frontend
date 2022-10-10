@@ -43,10 +43,10 @@
                 class="button"
                 rounded
                 text
-                elevation="2"
-                color="#9d8d8f"
+                elevation="10"
+                color="rgb(245,245,245)"
                 @click="postComment(firstName, companyName, email, comment)"
-                >Add a Review</v-btn>
+                >send a comment</v-btn>
                 <v-spacer />
         </v-card-actions>
     </v-card>
@@ -77,6 +77,6 @@ export default {
     padding: 2.5em;
 }
 .button {
-    background-color: #332639;
+    background-color: #9d8d8f;
 }
 </style>
