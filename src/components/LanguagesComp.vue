@@ -1,6 +1,6 @@
 <template>
 <div class="languages-section">
-    <h3 class="description">
+    <h3 class="description-p">
         Using <span class="p-span">powerful programming languages</span>, I am untethered and free from design restrictions, 
         <br>
         opening up an extensive creative environment.
@@ -76,11 +76,19 @@
         margin: 0;
     }
     
-    .description {
+    .description-p {
         font-size:1.3em;
         font-weight:bold;
         color: #b3aaab;
+        margin: 0;
+        @media screen and (min-width: 600px) {
+                font-size: 1.5em;
+        }
+        @media screen and (min-width: 1023px) {
+                font-size: 2em;
+        }
     }
+    
     .p-span {
         // margin: auto;
 

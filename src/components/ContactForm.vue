@@ -1,7 +1,6 @@
 <template>
-    <v-card class="contact-form" elevation="0" cols="12">
+    <v-form class="contact-form ma-0">
         <v-text-field
-            class="active"
             color="#332639"
             background-color='#9d8d8f'
             v-model="firstName"
@@ -35,10 +34,10 @@
             type="comment"
             outlined
             placeholder="Leave a comment..."
+            counter="200"
             >
         </v-textarea>
-        <v-card-actions>
-            <v-spacer />
+            
             <v-btn
                 class="button"
                 rounded
@@ -47,9 +46,8 @@
                 color="rgb(245,245,245)"
                 @click="postComment(firstName, companyName, email, comment)"
                 >send a comment</v-btn>
-                <v-spacer />
-        </v-card-actions>
-    </v-card>
+                
+    </v-form>
 </template>
 
 <script>
@@ -74,8 +72,9 @@ export default {
 .contact-form {
     background-color: inherit;
     color: whitesmoke;
-    padding: 2.5em;
+    max-width: 500px;
 }
+
 .button {
     background-color: #9d8d8f;
 }

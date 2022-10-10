@@ -1,6 +1,6 @@
 <template>
 <v-container fluid class="skills-div">
-    <v-row align="center" justify="space-around">
+    <v-row align="center">
         <v-col cols="12" xs="12" sm="12" md="6" lg="6" >
             <LanguagesComp />
         </v-col>

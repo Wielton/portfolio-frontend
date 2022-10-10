@@ -2,7 +2,7 @@
     <v-container fluid class="about-div">
         <v-row
             align="center"
-            class="design-section"
+            class="section"
             >
             <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6">
                 <h1 class="h1">
@@ -16,7 +16,7 @@
             <v-spacer class="hidden-sm-and-down"></v-spacer>
         </v-row>
         <v-row
-            class="secure-section"
+            class="section"
             align="center">
             <v-col cols="12" sm="12" xl="6">
                 <h1 class="h1 secure-h1">
@@ -31,7 +31,7 @@
             </v-col>
         </v-row>
         <v-row
-            class="seo-section"
+            class="section"
             >
             <v-spacer class="hidden-sm-and-down"></v-spacer>
             <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6">
@@ -45,7 +45,7 @@
             </v-col>
         </v-row>
         <v-row
-            class="secure-section"
+            class="section"
             align="center">
             <v-col cols="12" sm="12" md="12" lg="12" xl="6">
                 <h1 class="h1 dependability-h1">
@@ -67,18 +67,9 @@
 </script>
 
 <style lang="scss" scoped>
-    .about-div {
-    }
-    .design-section {
-        padding: 4em;
-        margin: 0;
-    }
-    .seo-section {
-        padding: 4em;
-        margin: 0;
-    }
-    .secure-section {
-        padding: 4em;
+    
+    .section {
+        padding: 4%;
         margin: 0;
     }
     h1 {

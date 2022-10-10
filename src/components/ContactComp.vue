@@ -1,14 +1,14 @@
 <template>
-    <v-container fluid>
-        <v-row align="center" class="pa-12">
-            <v-col cols="12" xs="12" sm="12" md="6" lg="8" xl="8" justify="center">
+    <v-container fluid >
+        <v-row>
+            <v-col cols="12" xs="12" sm="12" md="6" lg="8" xl="8">
                 <p class="description-p">
                     If you're looking to work together or to just say hello:
                     <br>
                     Fill out the form or send an email to the address below!
                 </p>
             </v-col>
-            <v-col cols="12" xs="12" sm="12" md="6" lg="4" xl="4" justify="center">
+            <v-col cols="12" xs="12" sm="12" md="6" lg="4" xl="4">
                 <ContactForm />
             </v-col>
         </v-row>

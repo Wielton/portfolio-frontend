@@ -66,19 +66,19 @@
 
         >
         <v-container fluid app>
-          <v-row ref="hero" class="hero" >
+          <v-row ref="hero" class="hero main-row ma-0">
             <HeroComp />
           </v-row>
-          <v-row ref="about" class="about">       
+          <v-row ref="about" class="about main-row ma-0">       
             <AboutComp />
           </v-row>
-          <v-row ref="skills" class="skills">   
+          <v-row ref="skills" class="skills main-row ma-0">   
             <SkillsComp />
           </v-row>
-          <v-row ref="projects" class="projects">  
+          <v-row ref="projects" class="projects main-row ma-0">  
             <ProjectsComp />
           </v-row>
-          <v-row ref="contacts" class="contact">
+          <v-row ref="contacts" class="contact main-row ma-0">
             <ContactComp />
           </v-row>
         </v-container>
@@ -150,6 +150,9 @@ export default {
   padding: 0;
   margin: 0;
   // padding: 0;
+}
+.main-row {
+  margin: 0;
 }
 
 .description-content {

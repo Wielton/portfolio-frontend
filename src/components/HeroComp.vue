@@ -60,6 +60,9 @@ export default {
     .full-div-text {
         font-size: 7em;
         color: #faed26;
+        @media screen and (min-width: 400px) {
+                font-size: 10em;
+        }
         @media screen and (min-width: 601px) {
                 font-size: 15em;
         }
@@ -71,6 +74,9 @@ export default {
         color: whitesmoke;
         
         font-size: 3em;
+        @media screen and (min-width: 400px) {
+                font-size: 4em;
+        }
         @media screen and (min-width: 601px) {
                 font-size: 5em;
         }
@@ -83,62 +89,43 @@ export default {
     .text-stack-div {
         height: 100%;
         position: relative;
+
         }
     .text {
         color: whitesmoke;
         margin: 0;
         height: 10%;
         top: 75%;
+        font-size: 2em;
+        @media screen and (min-width: 400px) {
+                font-size: 3em;
+        }
+        @media screen and (min-width: 601px) {
+                font-size: 4em;
+        }
+        @media screen and (min-width: 1000px) {
+                font-size: 6em;
+        }
     }
     .stack-s {
         --animate-delay: 0.1s;
-        font-size: 2em;
-        @media screen and (min-width: 601px) {
-                font-size: 4em;
-        }
-        @media screen and (min-width: 1000px) {
-                font-size: 6em;
-        }
+        
+        
         }
     .stack-t {
         --animate-delay: 0.1s;
-        font-size: 2em;
-        @media screen and (min-width: 601px) {
-                font-size: 4em;
-        }
-        @media screen and (min-width: 1000px) {
-                font-size: 6em;
-        }
+        
+        
         }
     .stack-a {
         --animate-delay: 0.1s;
-        font-size: 2em;
-        @media screen and (min-width: 601px) {
-                font-size: 4em;
-        }
-        @media screen and (min-width: 1000px) {
-                font-size: 6em;
-        }
+        
         }
     .stack-c {
         --animate-delay: 0.1s;
-        font-size: 2em;
-        @media screen and (min-width: 601px) {
-                font-size: 4em;
-        }
-        @media screen and (min-width: 1000px) {
-                font-size: 6em;
-        }
         }
     .stack-k {
         --animate-delay: 100ms;
-        font-size: 2em;
-        @media screen and (min-width: 601px) {
-                font-size: 4em;
-        }
-        @media screen and (min-width: 1000px) {
-                font-size: 6em;
-        }
         }
     
 </style>
