@@ -1,10 +1,15 @@
 <template>
-<div class="languages-section">
-    <h3 class="description-p">
-        Using <span class="p-span">powerful programming languages</span>, I am untethered and free from design restrictions, 
-        <br>
-        opening up an extensive creative environment.
-    </h3>
+<v-container class="languages-section">
+    <v-row class="text-align">
+        <v-col cols="12">
+            <h3 class="description-p">
+                Hello, I'm Grant, a junior full stack developer from Edmonton, Alberta.  I love using <span class="p-span">UI/UX</span>
+                to bring creative problem solving to production. 
+                <!-- Using <span class="p-span">VueJS</span> and its frameworks <span class="p-span">Vuetify</span>,
+                <span class="p-span">Vue Router</span>, and <span class="p-span">Vue Cookies</span>  
+                <br> -->
+                
+            </h3>
     <!-- <v-avatar class="vue logo">
         <Icon
             :src='languages.vue.logo'
@@ -29,7 +34,9 @@
             :icon='languages.mysql.logo'>
         </Icon>
     </v-avatar> -->
-</div>
+</v-col>
+</v-row>
+</v-container>
                 <!-- <span><h2>React</h2>
                     <v-avatar>
                         <Icon
@@ -69,7 +76,7 @@
 <style lang="scss" scoped>
 
 .logo {
-    color: #332639;
+    color: #C7CCDB;
 }
 .languages-section {
         padding: 5em;
@@ -79,7 +86,7 @@
     .description-p {
         font-size:1.3em;
         font-weight:bold;
-        color: #b3aaab;
+        color: #2A324B;
         margin: 0;
         @media screen and (min-width: 600px) {
                 font-size: 1.5em;
@@ -94,6 +101,6 @@
 
         font-size:1.7em;
         font-weight:bold;
-        color: #faed26;
+        color: #692C2C;
     }
 </style>

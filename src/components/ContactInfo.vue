@@ -17,7 +17,7 @@
                         >
                         <a :href="link.link">
                             <Icon
-                                style="color: #9d8d8f"
+                                style="color: #C7CCDB;"
                                 width="50"
                                 height="50"
                                 :icon="link.logo">
@@ -27,14 +27,12 @@
                 </div>
             </v-col>
         </v-row>
-        <v-row>
+        <v-row class="align-center justify-center">
             <v-col cols="12" align-self="center" >
                 <p class="text copyright">
-                    <span>
-                        <v-icon style="color: #9d8d8f">
+                        <v-icon class="text">
                             mdi-copyright
                         </v-icon>
-                    </span>
                     2022 WieltonWebDev 
                 </p>
                 
@@ -64,16 +62,10 @@ import { Icon } from '@iconify/vue2';
     }
     
     .text {
-        color: #9d8d8f;
+        color: #C7CCDB;
     }
     .footer-container {
         width: 100%;
-        
-    }
-    .footer-info {
-        
-    }
-    .footer-links {
         
     }
 </style>

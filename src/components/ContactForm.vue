@@ -1,8 +1,8 @@
 <template>
-    <v-form class="contact-form ma-0">
+    <v-form class="contact-form mx-auto">
         <v-text-field
             color="#332639"
-            background-color='#9d8d8f'
+            background-color='#C7CCDB'
             v-model="firstName"
             type="text"
             outlined
@@ -11,7 +11,7 @@
         </v-text-field>
         <v-text-field
             color="#332639"
-            background-color='#9d8d8f'
+            background-color='#C7CCDB'
             v-model="companyName"
             type="text"
             outlined
@@ -20,7 +20,7 @@
         </v-text-field>
         <v-text-field
             color="#332639"
-            background-color='#9d8d8f'
+            background-color='#C7CCDB'
             v-model="email"
             type="email"
             outlined
@@ -29,7 +29,7 @@
         </v-text-field>
         <v-textarea
             color="#332639"
-            background-color='#9d8d8f'
+            background-color='#C7CCDB'
             v-model="comment"
             type="comment"
             outlined
@@ -42,7 +42,7 @@
                 class="button"
                 rounded
                 text
-                elevation="10"
+                elevation="0"
                 color="rgb(245,245,245)"
                 @click="postComment(firstName, companyName, email, comment)"
                 >send a comment</v-btn>
@@ -71,11 +71,11 @@ export default {
 <style lang="scss" scoped>
 .contact-form {
     background-color: inherit;
-    color: whitesmoke;
+    color: #C7CCDB;
     max-width: 500px;
 }
 
 .button {
-    background-color: #9d8d8f;
+    background-color: #692C2C;
 }
 </style>

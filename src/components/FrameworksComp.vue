@@ -1,31 +1,38 @@
 <template>
-<div class="frameworks-section">
-    <h3 class="description-p">
-        I take advantage of industry-leading frameworks to provide a <span class="p-span">responsive design</span> from mobile to widescreen sizes.
-        <br>
-        Animations and effects add a modern touch, while colour schemes add elegance.
-    </h3>
-    <!-- <v-avatar v-for="framework, index in frameworks" :key="index" :framework="framework" class="icon-color">
-        <Icon
-            :src='framework.logo'
-            :icon='framework.logo'
-            
-        >
-        </Icon>
-    </v-avatar> -->
-</div>
+<v-container class="frameworks-section">
+    <v-row>
+        <v-col>
+            <h3 class="description-p">
+                I take advantage of industry-leading frameworks to provide a <span class="p-span">responsive design</span> from mobile to widescreen sizes.
+            </h3>
+        </v-col>
+    </v-row>
+    <v-row align="center" justify="space-around">
+        <v-col cols="3" v-for="(framework, index) in frameworks" :key="index" :framework="framework">
+            <v-avatar class="icon-color">
+                <Icon
+                    :src='framework.logo'
+                    :icon='framework.logo'
+                >
+                </Icon>
+        </v-avatar>
+        </v-col>
+    </v-row>
+</v-container>
 </template>
 
 <script>
-// import { Icon } from '@iconify/vue2';
+import { Icon } from '@iconify/vue2';
     export default {
-        // components: { Icon },
+        components: { Icon },
         data: () => ({
             
             frameworks: [
-                {name: 'Vuetify', logo: 'mdi:vuetify'},
-                {name: 'TailwindCSS', logo: 'mdi:tailwind'},
-                {name: 'Bootstrap', logo: 'mdi:bootstrap'}
+                {name: 'Vuetify', logo: 'mdi-vuetify'},
+                {name: 'VueJS', logo: 'mdi-vuejs'},
+                {name: 'Python', logo: 'mdi-language-python'},
+                {name: 'JavaScript', logo: 'mdi-language-javascript'},
+                {name: 'JavaScript', logo: 'mdi-la'},
             ],
         })
     }
@@ -36,11 +43,14 @@
         padding: 4%;
         margin: 0;
     }
+    .icon-color {
+        color: #C7CCDB;
+    }
     
     .description-p {
         font-size:1.3em;
         font-weight:bold;
-        color: #b3aaab;
+        color: #2A324B;
         margin: 0;
         @media screen and (min-width: 600px) {
                 font-size: 1.5em;
@@ -54,7 +64,7 @@
 
         font-size:1.7em;
         font-weight:bold;
-        color: #faed26;
+        color: #692C2C;
     }
     
 </style>

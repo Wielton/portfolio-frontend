@@ -1,6 +1,7 @@
 <template>
 <!-- <v-img :src="require('../src/assets/verticaljspic.jpg')"> -->
   <v-app app class="app-container pa-0 ma-0" ref="top">
+    <v-btn  right bottom small fixed fab @click="scrollsTo(topLink.url)"><v-icon>mdi-chevron-up </v-icon></v-btn>
     <v-app-bar
             app
             fixed
@@ -18,13 +19,13 @@
                 right
                 class="hidden-sm-and-down tabs"
                 hide-slider
-                color="#faed26"
+                
                 >
                 <v-tab
                     
                     v-for="(link, index) in navLinks"
                     :key="index"
-                    class="tab-links white--text"
+                    class="tab-links"
                     @click="scrollsTo(link.url)">{{link.name}}
                     
                 </v-tab>
@@ -100,7 +101,7 @@ import ContactInfo from './components/ContactInfo.vue';
 
 
 export default {
-  components: { HeroComp, AboutComp, ProjectsComp, ContactComp, SkillsComp, ContactInfo},
+  components: { HeroComp, ProjectsComp, ContactComp, SkillsComp, ContactInfo, AboutComp},
   name: 'App',
   props: {
     
@@ -121,7 +122,7 @@ export default {
                 { url: 'projects', name: "PROJECTS"},
                 { url: 'contacts', name: "CONTACT"}
                 ],
-      
+      topLink: {url: 'top', name: 'TOP'}
       
   }),
   methods: {
@@ -144,7 +145,7 @@ export default {
 #app {
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(to top, #46344e, #5a5560, #9d8d8f);
+  background-image: linear-gradient(to top, #2A324B, #767B91, #C7CCDB);
   scroll-behavior: smooth;
   overflow: hidden;
   padding: 0;
@@ -165,10 +166,10 @@ export default {
 // }
 
 .yellow-text {
-  color: #faed26;
+  color: #425a7d;
 }
 .white-text {
-  color: whitesmoke;
+  color: #692C2C;
 }
 h1 {
     color: #425a7d;
@@ -180,10 +181,10 @@ h1 {
     max-width: 70%;
 }
 .tab-links {
-  color: #faed26;
+  color: #692C2C;
 }
 .material-symbols-outlined {
-    color: #faed26;
+    color: #692C2C;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,

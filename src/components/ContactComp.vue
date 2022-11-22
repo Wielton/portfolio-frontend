@@ -27,7 +27,7 @@ export default {
     .description-p {
         font-size:1.3em;
         font-weight:bold;
-        color: #9d8d8f;
+        color: #C7CCDB;
         margin: 0;
         padding: 1em;
     }

@@ -18,7 +18,7 @@
                     </v-row>
                     <v-row>
                             <v-col cols="10" align="end">
-                                <h1 class="dev-div-h1 animate__animated animate__bounceInRight">Development</h1>
+                                <h1 class="dev-div-h1 animate__animated animate__bounceInRight">Developer</h1>
                             </v-col>
                         </v-row>
                     
@@ -59,7 +59,8 @@ export default {
     }
     .full-div-text {
         font-size: 7em;
-        color: #faed26;
+        // color: #faed26;
+        color: #1A4C78;
         @media screen and (min-width: 400px) {
                 font-size: 10em;
         }
@@ -71,7 +72,7 @@ export default {
         }
     }
     .dev-div-h1 {
-        color: whitesmoke;
+        color: #692C2C;
         
         font-size: 3em;
         @media screen and (min-width: 400px) {
@@ -92,7 +93,7 @@ export default {
 
         }
     .text {
-        color: whitesmoke;
+        color: #692C2C;
         margin: 0;
         height: 10%;
         top: 75%;
