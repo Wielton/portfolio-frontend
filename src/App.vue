@@ -1,7 +1,7 @@
 <template>
 <!-- <v-img :src="require('../src/assets/verticaljspic.jpg')"> -->
   <v-app app class="app-container pa-0 ma-0" ref="top">
-    <v-btn  right bottom small fixed fab @click="scrollsTo(topLink.url)"><v-icon>mdi-chevron-up </v-icon></v-btn>
+    <v-btn  right bottom small fixed fab @click="scrollsTo(topLink.url)" color="#692C2C"><v-icon color="#C7CCDB">mdi-chevron-up </v-icon></v-btn>
     <v-app-bar
             app
             fixed
@@ -13,7 +13,6 @@
             
             <h1 class="hidden-md-and-up"><span class="yellow-text">G</span><span class="white-text">W</span></h1>
             <h1 class="hidden-sm-and-down"><span class="yellow-text">Grant</span><span class="white-text"> Wielgosz</span></h1>
-            
             <v-spacer />
             <v-tabs
                 right
@@ -44,8 +43,9 @@
     </v-app-bar>
     <v-navigation-drawer
             v-model="drawer"
-            absolute
-            temporary>
+            fixed
+            temporary
+            height="fit-content">
             <v-list dense>
                 <v-list-item
                 v-for="(link, index) in navLinks"
@@ -58,7 +58,6 @@
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
-            <v-btn @click="drawer = !drawer">X</v-btn>
         </v-navigation-drawer>
         
       <v-main
@@ -70,15 +69,19 @@
           <v-row ref="hero" class="hero main-row ma-0">
             <HeroComp />
           </v-row>
-          <v-row ref="about" class="about main-row ma-0">       
-            <AboutComp />
-          </v-row>
+          
           <v-row ref="skills" class="skills main-row ma-0">   
             <SkillsComp />
           </v-row>
+          
           <v-row ref="projects" class="projects main-row ma-0">  
             <ProjectsComp />
           </v-row>
+          
+          <v-row ref="about" class="about main-row ma-0">       
+            <AboutComp />
+          </v-row>
+
           <v-row ref="contacts" class="contact main-row ma-0">
             <ContactComp />
           </v-row>
@@ -117,9 +120,9 @@ export default {
       ],
       navLinks: [
                 { url: 'hero', name:"HERO"},
-                { url: 'about', name: "ABOUT"},
                 { url: 'skills', name: "SKILLS"},
                 { url: 'projects', name: "PROJECTS"},
+                { url: 'about', name: "ABOUT"},
                 { url: 'contacts', name: "CONTACT"}
                 ],
       topLink: {url: 'top', name: 'TOP'}
@@ -150,7 +153,6 @@ export default {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  // padding: 0;
 }
 .main-row {
   margin: 0;
@@ -173,8 +175,6 @@ export default {
 }
 h1 {
     color: #425a7d;
-  
-    // color: rgba(32, 20, 137, 0.8);
 }
 .tabs {
     

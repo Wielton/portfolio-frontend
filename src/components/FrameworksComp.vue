@@ -1,13 +1,22 @@
 <template>
-<v-container class="frameworks-section">
-    <v-row>
-        <v-col>
+<v-container class="frameworks-section" fluid>
+    <v-row align="center" justify="center">
+        <v-col cols="12">
             <h3 class="description-p">
                 I take advantage of industry-leading frameworks to provide a <span class="p-span">responsive design</span> from mobile to widescreen sizes.
             </h3>
         </v-col>
     </v-row>
-    <v-row align="center" justify="space-around">
+    <v-row>
+        <v-col cols="12">
+            <v-divider />
+            <h3 class="description-p">
+                Check out some of my projects below!
+            </h3>
+            <v-divider />
+        </v-col>
+    </v-row>
+    <!-- <v-row align="center" justify="space-around">
         <v-col cols="3" v-for="(framework, index) in frameworks" :key="index" :framework="framework">
             <v-avatar class="icon-color">
                 <Icon
@@ -17,14 +26,14 @@
                 </Icon>
         </v-avatar>
         </v-col>
-    </v-row>
+    </v-row> -->
 </v-container>
 </template>
 
 <script>
-import { Icon } from '@iconify/vue2';
+// import { Icon } from '@iconify/vue2';
     export default {
-        components: { Icon },
+        // components: { Icon },
         data: () => ({
             
             frameworks: [
@@ -49,7 +58,6 @@ import { Icon } from '@iconify/vue2';
     
     .description-p {
         font-size:1.3em;
-        font-weight:bold;
         color: #2A324B;
         margin: 0;
         @media screen and (min-width: 600px) {
@@ -63,7 +71,6 @@ import { Icon } from '@iconify/vue2';
         // margin: auto;
 
         font-size:1.7em;
-        font-weight:bold;
         color: #692C2C;
     }
     

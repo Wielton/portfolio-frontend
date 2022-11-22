@@ -1,11 +1,9 @@
 <template>
-    <v-container fluid >
-        <v-row>
+    <v-container fluid>
+        <v-row align="center">
             <v-col cols="12" xs="12" sm="12" md="6" lg="8" xl="8">
                 <p class="description-p">
-                    If you're looking to work together or to just say hello:
-                    <br>
-                    Fill out the form or send an email to the address below!
+                    If you'd like to discuss me joining your team, drop me a line!
                 </p>
             </v-col>
             <v-col cols="12" xs="12" sm="12" md="6" lg="4" xl="4">
@@ -26,9 +24,14 @@ export default {
 <style lang="scss" scoped>
     .description-p {
         font-size:1.3em;
-        font-weight:bold;
         color: #C7CCDB;
         margin: 0;
-        padding: 1em;
+        padding: 2em;
+        @media screen and (min-width: 600px) {
+                font-size: 1.5em;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 2em;
+        }
     }
 </style>

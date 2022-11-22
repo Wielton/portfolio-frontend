@@ -1,53 +1,60 @@
 <template>
-    <v-form class="contact-form mx-auto">
-        <v-text-field
-            color="#332639"
-            background-color='#C7CCDB'
-            v-model="firstName"
-            type="text"
-            outlined
-            placeholder="First name..."
-            >
-        </v-text-field>
-        <v-text-field
-            color="#332639"
-            background-color='#C7CCDB'
-            v-model="companyName"
-            type="text"
-            outlined
-            placeholder="Company name..."
-            >
-        </v-text-field>
-        <v-text-field
-            color="#332639"
-            background-color='#C7CCDB'
-            v-model="email"
-            type="email"
-            outlined
-            placeholder="Email..."
-            >
-        </v-text-field>
-        <v-textarea
-            color="#332639"
-            background-color='#C7CCDB'
-            v-model="comment"
-            type="comment"
-            outlined
-            placeholder="Leave a comment..."
-            counter="200"
-            >
-        </v-textarea>
-            
-            <v-btn
-                class="button"
-                rounded
-                text
-                elevation="0"
-                color="rgb(245,245,245)"
-                @click="postComment(firstName, companyName, email, comment)"
-                >send a comment</v-btn>
-                
-    </v-form>
+    <v-container fluid>
+        <v-row align="center" justify="center">
+            <v-col cols="12">
+                <v-form class="contact-form mx-auto">
+                    <v-text-field
+                        color="#332639"
+                        background-color='#C7CCDB'
+                        v-model="firstName"
+                        type="text"
+                        outlined
+                        placeholder="First name..."
+                        >
+                    </v-text-field>
+                    <v-text-field
+                        color="#332639"
+                        background-color='#C7CCDB'
+                        v-model="companyName"
+                        type="text"
+                        outlined
+                        placeholder="Company name..."
+                        >
+                    </v-text-field>
+                    <v-text-field
+                        color="#332639"
+                        background-color='#C7CCDB'
+                        v-model="email"
+                        type="email"
+                        outlined
+                        placeholder="Email..."
+                        >
+                    </v-text-field>
+                    <v-textarea
+                        color="#332639"
+                        background-color='#C7CCDB'
+                        v-model="comment"
+                        type="comment"
+                        outlined
+                        placeholder="Leave a comment..."
+                        counter="200"
+                        >
+                    </v-textarea>
+                        
+                        <v-btn
+                            class="button"
+                            rounded
+                            text
+                            elevation="0"
+                            color="rgb(245,245,245)"
+                            @click="postComment(firstName, companyName, email, comment)"
+                            >send a comment</v-btn>
+                            
+                </v-form>
+            </v-col>
+        </v-row>
+    </v-container>
+    
 </template>
 
 <script>

@@ -1,10 +1,11 @@
 <template>
 <v-container fluid class="skills-div">
-    <v-row align="center">
-        <v-col cols="12" xs="12" sm="12" md="6" lg="6" >
+    <v-row align="center" justify="center">
+        
+        <v-col cols="12">
             <LanguagesComp />
         </v-col>
-        <v-col cols="12" xs="12" sm="12" md="6" lg="6">
+        <v-col cols="12">
             <FrameworksComp />
         </v-col>
     </v-row>
